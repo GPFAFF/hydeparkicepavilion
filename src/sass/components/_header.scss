@@ -1,0 +1,21 @@
+@import "vars/_vars.scss";
+
+header {
+  background-color: $blue;
+
+  h1 {
+    color: $white;
+    text-shadow: 1px 1px 1px $black;
+    font-size: $header_font_size_mobile;
+    font-weight: $bold;
+    font-family: $header_font;
+    text-align: center;
+    text-transform: uppercase;
+    padding: $desktop_padding;
+    margin: 0;
+
+    @media (min-width: $tablet) {
+      font-size: $header_font_size;
+    }
+  }
+}

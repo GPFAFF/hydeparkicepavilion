@@ -1,25 +1,38 @@
 {
-  "name": "hydeparkicepavilion",
-  "version": "0.1.0",
-  "private": true,
+  "name": "project-name",
+  "version": "0.0.1",
+  "description": "A description for your project.",
+  "main": "./dist/your-main-js-file.js",
+  "author": {
+    "name": "GREG PFAFF"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://link-to-your-git-repo.com"
+  },
+  "devDependencies": {
+    "browser-sync": "2.26.3",
+    "del": "3.0.0",
+    "gulp": "4.0.0",
+    "gulp-autoprefixer": "6.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-cssnano": "2.1.3",
+    "gulp-flatmap": "1.0.2",
+    "gulp-header": "2.0.5",
+    "gulp-jshint": "2.1.0",
+    "gulp-optimize-js": "1.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "1.4.0",
+    "gulp-sass": "4.0.2",
+    "gulp-svgmin": "2.1.0",
+    "gulp-terser": "1.1.7",
+    "jshint": "2.9.6",
+    "jshint-stylish": "2.2.1",
+    "lazypipe": "1.0.1",
+    "pug": "^2.0.3"
+  },
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "gulp-imagemin": "^5.0.3"
+  }
 }

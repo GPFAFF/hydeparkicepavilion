@@ -1,0 +1,21 @@
+nav {
+  background-color: $black;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: $mobile_padding;
+  }
+  li {
+    flex: 1;
+    text-align: center;
+    a {
+      color: $white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+  }
+}

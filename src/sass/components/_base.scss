@@ -1,0 +1,23 @@
+/**
+ * @section Base Styles
+ */
+
+@import "vars/_vars.scss";
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  background: url("../img/hockey-bg.jpg") center / cover no-repeat;
+  font-family: $regular_font;
+  height: auto;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
