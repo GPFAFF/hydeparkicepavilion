@@ -14,9 +14,10 @@ header {
     padding: $mobile_padding;
     text-align: left;
     text-transform: uppercase;
-    margin: 40px 0 0;
+    margin: 80px 0 0;
 
     @media (min-width: $tablet) {
+      margin: 40px 0 0;
       padding: $desktop_padding;
       font-size: $header_font_size;
     }

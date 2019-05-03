@@ -7,10 +7,11 @@
   flex-direction: column;
   width: 100%;
   opacity: 0;
+
   &.opened {
     transition: 0.25s;
     transition-timing-function: ease-in;
-    transform: translateY(-20%);
+    transform: translateY(20%);
     opacity: 1;
   }
 
