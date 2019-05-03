@@ -39,12 +39,17 @@ main {
     transform: translateY(0%);
     transition-timing-function: ease-in;
     transition: 0.2s;
+    display: flex;
+    flex-direction: column;
   }
 
   section {
     height: 700px;
     background-color: $blue;
-    padding: 40px;
+    padding: 20px;
+    @media (min-width: $mobile) {
+      padding: 40px;
+    }
   }
 
   #home {
