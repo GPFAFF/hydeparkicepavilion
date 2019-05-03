@@ -57,34 +57,48 @@ main.opened {
           transition-timing-function: ease-in;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-/* line 44, src/sass/components/_base.scss */
+/* line 46, src/sass/components/_base.scss */
 main section {
   height: 700px;
   background-color: #226089;
-  padding: 40px;
+  padding: 20px;
 }
 
-/* line 50, src/sass/components/_base.scss */
+@media (min-width: 480px) {
+  /* line 46, src/sass/components/_base.scss */
+  main section {
+    padding: 40px;
+  }
+}
+
+/* line 55, src/sass/components/_base.scss */
 main #home {
   background: url("../img/hockey-bg.jpg") center/cover no-repeat;
 }
 
-/* line 55, src/sass/components/_base.scss */
+/* line 60, src/sass/components/_base.scss */
 ul {
   list-style: none;
   padding: 0;
 }
 
-/* line 59, src/sass/components/_base.scss */
+/* line 64, src/sass/components/_base.scss */
 ul a {
   text-decoration: none;
   color: #ffffff;
   display: inline-block;
 }
 
-/* line 64, src/sass/components/_base.scss */
+/* line 69, src/sass/components/_base.scss */
 ul a::after {
   content: "";
   width: 0px;
@@ -95,23 +109,23 @@ ul a::after {
   transition: 300ms;
 }
 
-/* line 73, src/sass/components/_base.scss */
+/* line 78, src/sass/components/_base.scss */
 ul a:hover {
   -webkit-transform: transition 0.2s ease-in;
           transform: transition 0.2s ease-in;
 }
 
-/* line 76, src/sass/components/_base.scss */
+/* line 81, src/sass/components/_base.scss */
 ul a:hover::after {
   width: 100%;
 }
 
-/* line 83, src/sass/components/_base.scss */
+/* line 88, src/sass/components/_base.scss */
 .hidden {
   display: none;
 }
 
-/* line 87, src/sass/components/_base.scss */
+/* line 92, src/sass/components/_base.scss */
 .opened {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,8 +207,8 @@ ul a:hover::after {
   transition: 0.25s;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
-  -webkit-transform: translateY(20%);
-          transform: translateY(20%);
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
   opacity: 1;
 }
 
@@ -203,9 +217,10 @@ ul a:hover::after {
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
+  margin: 40px 0;
 }
 
-/* line 24, src/sass/components/_mobile_nav.scss */
+/* line 25, src/sass/components/_mobile_nav.scss */
 .mobile-nav li {
   padding: 10px;
   text-transform: uppercase;
@@ -262,14 +277,15 @@ footer {
   left: 10px;
   position: relative;
   top: -15px;
+  width: 30px;
 }
 
-/* line 6, src/sass/components/_close_button.scss */
+/* line 7, src/sass/components/_close_button.scss */
 .close:hover {
   cursor: pointer;
 }
 
-/* line 10, src/sass/components/_close_button.scss */
+/* line 11, src/sass/components/_close_button.scss */
 .close .bar {
   width: 30px;
   height: 5px;
@@ -280,7 +296,7 @@ footer {
   margin-top: 5px;
 }
 
-/* line 18, src/sass/components/_close_button.scss */
+/* line 19, src/sass/components/_close_button.scss */
 .close .bar:first-of-type {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -288,7 +304,7 @@ footer {
   position: relative;
 }
 
-/* line 24, src/sass/components/_close_button.scss */
+/* line 25, src/sass/components/_close_button.scss */
 .close .bar:last-of-type {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -337,7 +353,7 @@ header h1 span {
 
 /* line 3, src/sass/components/_hgroup.scss */
 h2 {
-  font-size: 50px;
+  font-size: 40px;
   text-shadow: 0 1px 1px #000000;
   color: #ffffff;
 }

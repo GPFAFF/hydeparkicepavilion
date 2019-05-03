@@ -11,7 +11,7 @@
   &.opened {
     transition: 0.25s;
     transition-timing-function: ease-in;
-    transform: translateY(20%);
+    transform: translateY(10%);
     opacity: 1;
   }
 
@@ -19,6 +19,7 @@
     color: $white;
     text-transform: uppercase;
     text-align: center;
+    margin: 40px 0;
   }
 
   li {
