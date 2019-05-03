@@ -1,0 +1,31 @@
+.close {
+  left: 10px;
+  position: relative;
+  top: -15px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 30px;
+    height: 5px;
+    background-color: #ffffff;
+    box-shadow: $shadow;
+    border-radius: 20px;
+    margin-top: 5px;
+
+    &:first-of-type {
+      transform: rotate(-45deg);
+      top: -10px;
+      position: relative;
+    }
+
+    &:last-of-type {
+      transform: rotate(45deg);
+      top: -20px;
+      position: relative;
+      box-shadow: none;
+    }
+  }
+}

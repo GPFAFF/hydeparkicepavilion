@@ -1,0 +1,16 @@
+.hamburger {
+  &:hover {
+    cursor: pointer;
+  }
+  .bar {
+    width: 30px;
+    height: 5px;
+    background-color: $white;
+    box-shadow: $shadow;
+    border-radius: 20px;
+    margin-top: 5px;
+  }
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}

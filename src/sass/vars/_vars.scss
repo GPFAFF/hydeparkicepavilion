@@ -5,13 +5,14 @@ $blue: #226089;
 $white: #ffffff;
 $black: #000000;
 
-$header_font_size_mobile: 32px;
-$header_font_size: 64px;
+$header_font_size_mobile: 64px;
+$header_font_size: 100px;
 $text-shadow: 0 1px 1px $black;
+$shadow: 1px 1px 1px $black;
 
 $bold: 600;
 $mobile_padding: 20px 0;
-$desktop_padding: 40px;
+$desktop_padding: 40px 0;
 $regular_font: "Open Sans", sans-serif;
 $header_font: "Titillium Web", sans-serif;
 

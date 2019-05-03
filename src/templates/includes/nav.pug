@@ -1,6 +1,7 @@
-nav
-  ul(class="reveal")
+nav(class="desktop-nav")
+  .logo
+  ul
     each val in ['home', 'rent-ice', 'hockey', 'tournaments', 'parties', 'contact']
       li
-        a(href=`${val}.html`)= val
+        a.link(href=`#${val}`)= val
 

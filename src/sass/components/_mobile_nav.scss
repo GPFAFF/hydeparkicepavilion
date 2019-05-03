@@ -1,0 +1,27 @@
+.mobile-nav {
+  background-color: $blue;
+  position: absolute;
+  left: 0;
+  top: -50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  opacity: 0;
+  &.opened {
+    transition: 0.25s;
+    transition-timing-function: ease-in;
+    transform: translateY(-20%);
+    opacity: 1;
+  }
+
+  h3 {
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  li {
+    padding: 10px;
+    text-transform: uppercase;
+  }
+}

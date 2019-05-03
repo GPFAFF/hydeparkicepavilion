@@ -4,15 +4,21 @@
 
 @import "vars/_vars.scss";
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
 html {
   height: 100%;
 }
 
 body {
+  min-height: 100%;
   margin: 0 auto;
-  background: url("../img/hockey-bg.jpg") center / cover no-repeat;
   font-family: $regular_font;
-  height: auto;
+  min-height: 100%;
 }
 
 input,
@@ -20,4 +26,70 @@ textarea,
 select,
 button {
   font: inherit;
+}
+
+main {
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  transform: translateY(0%);
+  transition-timing-function: ease-out;
+  transition: 0.2s;
+
+  &.opened {
+    transform: translateY(40%);
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+  }
+
+  section {
+    height: 700px;
+    background-color: $blue;
+    width: 100%;
+    padding: 40px;
+  }
+
+  #home {
+    background: url("../img/hockey-bg.jpg") center / cover no-repeat;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+    color: $white;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      width: 0px;
+      height: 2px;
+      display: block;
+      background: $white;
+      transition: 300ms;
+    }
+
+    &:hover {
+      transform: transition 0.2s ease-in;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.opened {
+  display: flex;
 }

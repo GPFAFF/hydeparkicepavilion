@@ -1,0 +1,21 @@
+doctype html
+title Hyde Park Ice Pavilion - Home
+block styles
+  meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+  link(rel="stylesheet" href="css/main.css")
+  link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Titillium+Web")
+
+  html
+  body
+    main
+      include includes/home.pug
+      include includes/rent-ice.pug
+      include includes/hockey.pug
+      include includes/tournaments.pug
+      include includes/parties.pug
+      include includes/contact.pug
+      include includes/footer.pug
+
+    script(src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU")
+    script(src="/js/main.polyfills.min.js")
+n
