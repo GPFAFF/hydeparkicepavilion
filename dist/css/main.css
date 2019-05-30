@@ -67,38 +67,52 @@ main.opened {
 }
 
 /* line 46, src/sass/components/_base.scss */
+main footer {
+  background-color: #226089;
+  text-align: center;
+}
+
+/* line 51, src/sass/components/_base.scss */
 main section {
-  height: 700px;
+  min-height: 100vh;
   background-color: #226089;
   padding: 20px;
 }
 
 @media (min-width: 480px) {
-  /* line 46, src/sass/components/_base.scss */
+  /* line 51, src/sass/components/_base.scss */
   main section {
     padding: 40px;
+    min-height: 100vh;
   }
 }
 
-/* line 55, src/sass/components/_base.scss */
+/* line 60, src/sass/components/_base.scss */
+main section > section {
+  padding: 0;
+  height: auto;
+  min-height: 0;
+}
+
+/* line 67, src/sass/components/_base.scss */
 main #home {
   background: url("../img/hockey-bg.jpg") center/cover no-repeat;
 }
 
-/* line 60, src/sass/components/_base.scss */
+/* line 72, src/sass/components/_base.scss */
 ul {
   list-style: none;
   padding: 0;
 }
 
-/* line 64, src/sass/components/_base.scss */
+/* line 76, src/sass/components/_base.scss */
 ul a {
   text-decoration: none;
   color: #ffffff;
   display: inline-block;
 }
 
-/* line 69, src/sass/components/_base.scss */
+/* line 81, src/sass/components/_base.scss */
 ul a::after {
   content: "";
   width: 0px;
@@ -109,23 +123,23 @@ ul a::after {
   transition: 300ms;
 }
 
-/* line 78, src/sass/components/_base.scss */
+/* line 90, src/sass/components/_base.scss */
 ul a:hover {
   -webkit-transform: transition 0.2s ease-in;
           transform: transition 0.2s ease-in;
 }
 
-/* line 81, src/sass/components/_base.scss */
+/* line 93, src/sass/components/_base.scss */
 ul a:hover::after {
   width: 100%;
 }
 
-/* line 88, src/sass/components/_base.scss */
+/* line 100, src/sass/components/_base.scss */
 .hidden {
   display: none;
 }
 
-/* line 92, src/sass/components/_base.scss */
+/* line 104, src/sass/components/_base.scss */
 .opened {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -199,17 +213,17 @@ ul a:hover::after {
           flex-direction: column;
   width: 100%;
   opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
-/* line 11, src/sass/components/_mobile_nav.scss */
+/* line 12, src/sass/components/_mobile_nav.scss */
 .mobile-nav.opened {
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
   -webkit-transform: translateY(10%);
           transform: translateY(10%);
   opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 /* line 18, src/sass/components/_mobile_nav.scss */
@@ -352,6 +366,13 @@ header h1 span {
 }
 
 /* line 3, src/sass/components/_hgroup.scss */
+h2,
+h3 {
+  line-height: 1;
+  margin-top: 0;
+}
+
+/* line 9, src/sass/components/_hgroup.scss */
 h2 {
   font-size: 40px;
   text-shadow: 0 1px 1px #000000;
@@ -359,9 +380,23 @@ h2 {
 }
 
 @media (min-width: 480px) {
-  /* line 3, src/sass/components/_hgroup.scss */
+  /* line 9, src/sass/components/_hgroup.scss */
   h2 {
     font-size: 80px;
+  }
+}
+
+/* line 19, src/sass/components/_hgroup.scss */
+h3 {
+  font-size: 20px;
+  text-shadow: 0 1px 1px #000000;
+  color: #000000;
+}
+
+@media (min-width: 480px) {
+  /* line 19, src/sass/components/_hgroup.scss */
+  h3 {
+    font-size: 40px;
   }
 }
 
@@ -427,4 +462,78 @@ h2 {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   left: 23px;
+}
+
+/* line 1, src/sass/components/_banner.scss */
+.banner {
+  background-color: #ffffff;
+  -webkit-box-shadow: 1px 1px 1px #000000;
+          box-shadow: 1px 1px 1px #000000;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+/* line 1, src/sass/components/_button.scss */
+.button {
+  background-color: #ffffff;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 20px;
+  text-decoration: none;
+  color: #000000;
+  border-radius: 4px;
+  width: 300px;
+  font-weight: 600;
+  margin: 40px 0 0;
+  display: block;
+  text-align: center;
+}
+
+/* line 1, src/sass/components/_map.scss */
+.map {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  margin-top: 60px;
+}
+
+/* line 8, src/sass/components/_map.scss */
+.map #map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+/* line 1, src/sass/components/_team.scss */
+.team {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* line 8, src/sass/components/_team.scss */
+.team .member {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 1px #000000;
+          box-shadow: 1px 1px 1px #000000;
+  font-family: Titillium Web, sans-serif;
+}
+
+/* line 15, src/sass/components/_team.scss */
+.team .member .card {
+  max-width: 100%;
+}
+
+/* line 19, src/sass/components/_team.scss */
+.team .member .title,
+.team .member .name,
+.team .member .email {
+  font-size: 20px;
+  font-weight: 600;
 }

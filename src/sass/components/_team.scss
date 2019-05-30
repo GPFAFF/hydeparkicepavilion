@@ -1,0 +1,26 @@
+.team {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  .member {
+    background-color: $white;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: $shadow;
+    font-family: Titillium Web, sans-serif;
+
+    .card {
+      max-width: 100%;
+    }
+
+    .title,
+    .name,
+    .email {
+      font-size: 20px;
+      font-weight: $bold;
+    }
+  }
+}
