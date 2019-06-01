@@ -3,4 +3,10 @@
   box-shadow: $shadow;
   padding: 20px;
   border-radius: 4px;
+
+  h3,
+  p {
+    color: $black;
+    text-shadow: none;
+  }
 }

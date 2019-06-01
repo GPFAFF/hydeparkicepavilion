@@ -367,34 +367,33 @@ header h1 span {
 
 /* line 3, src/sass/components/_hgroup.scss */
 h2,
-h3 {
+h3,
+p {
   line-height: 1;
   margin-top: 0;
+  color: #ffffff;
+  text-shadow: 0 1px 1px #000000;
 }
 
-/* line 9, src/sass/components/_hgroup.scss */
+/* line 12, src/sass/components/_hgroup.scss */
 h2 {
   font-size: 40px;
-  text-shadow: 0 1px 1px #000000;
-  color: #ffffff;
 }
 
 @media (min-width: 480px) {
-  /* line 9, src/sass/components/_hgroup.scss */
+  /* line 12, src/sass/components/_hgroup.scss */
   h2 {
     font-size: 80px;
   }
 }
 
-/* line 19, src/sass/components/_hgroup.scss */
+/* line 20, src/sass/components/_hgroup.scss */
 h3 {
   font-size: 20px;
-  text-shadow: 0 1px 1px #000000;
-  color: #000000;
 }
 
 @media (min-width: 480px) {
-  /* line 19, src/sass/components/_hgroup.scss */
+  /* line 20, src/sass/components/_hgroup.scss */
   h3 {
     font-size: 40px;
   }
@@ -473,6 +472,13 @@ h3 {
   border-radius: 4px;
 }
 
+/* line 7, src/sass/components/_banner.scss */
+.banner h3,
+.banner p {
+  color: #000000;
+  text-shadow: none;
+}
+
 /* line 1, src/sass/components/_button.scss */
 .button {
   background-color: #ffffff;
@@ -512,7 +518,7 @@ h3 {
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 /* line 8, src/sass/components/_team.scss */

@@ -1,15 +1,16 @@
 @import "vars/_vars.scss";
 
 h2,
-h3 {
+h3,
+p {
   line-height: 1;
   margin-top: 0;
+  color: $white;
+  text-shadow: $text-shadow;
 }
 
 h2 {
   font-size: 40px;
-  text-shadow: $text-shadow;
-  color: $white;
 
   @media (min-width: $mobile) {
     font-size: 80px;
@@ -18,8 +19,6 @@ h2 {
 
 h3 {
   font-size: 20px;
-  text-shadow: $text-shadow;
-  color: $black;
 
   @media (min-width: $mobile) {
     font-size: 40px;

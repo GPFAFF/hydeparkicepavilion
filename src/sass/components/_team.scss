@@ -3,7 +3,7 @@
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   .member {
     background-color: $white;
