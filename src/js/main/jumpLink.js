@@ -1,13 +1,18 @@
 document.addEventListener('click',  (event) => {
-  event.preventDefault();
   if (!event.target.className.includes('link')) return;
   const href = event.target.getAttribute('href');
-  console.log('called');
-  singleton(href, {
-    duration: 1000,
-    offset: 0,
-    callback: undefined,
-    easing: easeInOutQuad,
-    a11y: false
-  })
+  const dataApps = [].slice.call(document.querySelectorAll('[data-app]'));
+  const target = dataApps.find(x => {
+    return `#${x.getAttribute('data-app')}` === href
+  });
+  dataApps.map(item => {
+    item.style.display = 'none'
+    item.classList.add('hidden');
+  });
+  target.style.display = 'block';
+  target.classList.add('active');
+  target.classList.remove('hidden');
+  const blah = target.offsetHeight
+  target.style.marginTop = `${-blah / 2}px`;
+  target.style.paddingTop = `${(blah / 2) + 50}px`;
 });

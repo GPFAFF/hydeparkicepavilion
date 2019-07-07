@@ -11,14 +11,11 @@ header {
     line-height: 1;
     font-weight: $bold;
     font-family: $header_font;
-    padding: $mobile_padding;
     text-align: left;
     text-transform: uppercase;
-    margin: 80px 0 0;
+    margin: 0;
 
     @media (min-width: $tablet) {
-      margin: 40px 0 0;
-      padding: $desktop_padding;
       font-size: $header_font_size;
     }
 

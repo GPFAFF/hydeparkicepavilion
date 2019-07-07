@@ -18,15 +18,15 @@ body {
 
 /* line 13, src/sass/components/_base.scss */
 html {
-  height: 100%;
+  min-height: 100%;
 }
 
 /* line 17, src/sass/components/_base.scss */
 body {
-  min-height: 100%;
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
-  min-height: 100%;
+  height: auto;
+  background: url("../img/hockey-bg.jpg") center/cover no-repeat;
 }
 
 /* line 24, src/sass/components/_base.scss */
@@ -40,13 +40,13 @@ button {
 /* line 31, src/sass/components/_base.scss */
 main {
   margin: 0 auto;
-  height: 100%;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  min-height: 100vh;
 }
 
 /* line 38, src/sass/components/_base.scss */
@@ -68,51 +68,52 @@ main.opened {
 
 /* line 46, src/sass/components/_base.scss */
 main footer {
-  background-color: #226089;
   text-align: center;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
 }
 
-/* line 51, src/sass/components/_base.scss */
+/* line 53, src/sass/components/_base.scss */
+main h2 {
+  margin-top: -285px;
+  padding-top: 285px;
+  display: inline-block;
+}
+
+/* line 59, src/sass/components/_base.scss */
 main section {
-  min-height: 100vh;
-  background-color: #226089;
   padding: 20px;
 }
 
 @media (min-width: 480px) {
-  /* line 51, src/sass/components/_base.scss */
+  /* line 59, src/sass/components/_base.scss */
   main section {
     padding: 40px;
-    min-height: 100vh;
   }
 }
 
-/* line 60, src/sass/components/_base.scss */
+/* line 65, src/sass/components/_base.scss */
 main section > section {
   padding: 0;
   height: auto;
   min-height: 0;
 }
 
-/* line 67, src/sass/components/_base.scss */
-main #home {
-  background: url("../img/hockey-bg.jpg") center/cover no-repeat;
-}
-
-/* line 72, src/sass/components/_base.scss */
+/* line 73, src/sass/components/_base.scss */
 ul {
   list-style: none;
   padding: 0;
 }
 
-/* line 76, src/sass/components/_base.scss */
+/* line 77, src/sass/components/_base.scss */
 ul a {
   text-decoration: none;
   color: #ffffff;
   display: inline-block;
 }
 
-/* line 81, src/sass/components/_base.scss */
+/* line 82, src/sass/components/_base.scss */
 ul a::after {
   content: "";
   width: 0px;
@@ -123,27 +124,15 @@ ul a::after {
   transition: 300ms;
 }
 
-/* line 90, src/sass/components/_base.scss */
+/* line 91, src/sass/components/_base.scss */
 ul a:hover {
   -webkit-transform: transition 0.2s ease-in;
           transform: transition 0.2s ease-in;
 }
 
-/* line 93, src/sass/components/_base.scss */
+/* line 94, src/sass/components/_base.scss */
 ul a:hover::after {
   width: 100%;
-}
-
-/* line 100, src/sass/components/_base.scss */
-.hidden {
-  display: none;
-}
-
-/* line 104, src/sass/components/_base.scss */
-.opened {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 /* line 1, src/sass/components/_nav.scss */
@@ -245,18 +234,25 @@ ul a:hover::after {
   display: none;
 }
 
-/* line 1, src/sass/components/_footer.scss */
-footer {
+/* line 5, src/sass/components/_helpers.scss */
+.active {
+  display: block;
+}
+
+/* line 9, src/sass/components/_helpers.scss */
+[data-app] {
+  display: none;
+}
+
+/* line 13, src/sass/components/_helpers.scss */
+.opened {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+}
+
+/* line 1, src/sass/components/_footer.scss */
+footer {
   margin: 0 auto;
   color: #ffffff;
   font-size: 20px;
@@ -345,22 +341,19 @@ header h1 {
   line-height: 1;
   font-weight: 600;
   font-family: "Titillium Web", sans-serif;
-  padding: 20px 0;
   text-align: left;
   text-transform: uppercase;
-  margin: 80px 0 0;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
   /* line 4, src/sass/components/_header.scss */
   header h1 {
-    margin: 40px 0 0;
-    padding: 40px 0;
     font-size: 100px;
   }
 }
 
-/* line 25, src/sass/components/_header.scss */
+/* line 22, src/sass/components/_header.scss */
 header h1 span {
   display: block;
 }

@@ -4,4 +4,4 @@ nav(class="mobile-nav hidden")
     include close-button.pug
     each val in ['home', 'rent-ice', 'hockey', 'tournaments', 'parties', 'contact']
       li
-        a(href=`${val}.html`)= val
+        a.link(href=`#${val}`)= val

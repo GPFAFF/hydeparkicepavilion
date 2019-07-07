@@ -6,7 +6,7 @@
 <html></html>
 <body>
   <main>
-    <section id="home">
+    <section class="nav-container">
       <div class="hamburger" role="button">
         <div class="bar"></div>
         <div class="bar"></div>
@@ -31,19 +31,21 @@
             <div class="bar"></div>
             <div class="bar"></div>
           </div>
-          <li><a href="home.html">home</a></li>
-          <li><a href="rent-ice.html">rent-ice</a></li>
-          <li><a href="hockey.html">hockey</a></li>
-          <li><a href="tournaments.html">tournaments</a></li>
-          <li><a href="parties.html">parties</a></li>
-          <li><a href="contact.html">contact</a></li>
+          <li><a class="link" href="#home">home</a></li>
+          <li><a class="link" href="#rent-ice">rent-ice</a></li>
+          <li><a class="link" href="#hockey">hockey</a></li>
+          <li><a class="link" href="#tournaments">tournaments</a></li>
+          <li><a class="link" href="#parties">parties</a></li>
+          <li><a class="link" href="#contact">contact</a></li>
         </ul>
       </nav>
+    </section>
+    <section class="home" data-app="home">
       <header>
         <h1><span>Hyde Park</span><span>Ice Pavilion</span></h1>
       </header>
     </section>
-    <section id="rent-ice">
+    <section id="rent-ice" data-app="rent-ice">
       <h2>Rent Ice</h2>
       <section class="banner">
         <h3>Public Skating Hours</h3>
@@ -65,16 +67,16 @@
         <p>If you have any questions or concerns, or need help with booking a time please give Mike Carella a call at 716-316-1526</p><a class="rent-ice button" target="_blank" rel="noopener noreferrer" href="https://tms.ezfacility.com/overview2.aspx?vouname=vohydepark&amp;amp;vopassword=123456">Rent Ice Today</a>
       </section>
     </section>
-    <section id="hockey">
+    <section id="hockey" data-app="hockey">
       <h2>Hockey</h2>
     </section>
-    <section id="tournaments">
+    <section id="tournaments" data-app="tournaments">
       <h2>Tournaments</h2>
     </section>
-    <section id="parties">
+    <section id="parties" data-app="parties">
       <h2>Parties</h2>
     </section>
-    <section class="contact">
+    <section id="contact" data-app="contact">
       <h2>Contact Our Team</h2>
       <section class="team">
         <div class="member"><img class="card" src="img/mcarella.jpg">

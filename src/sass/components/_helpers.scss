@@ -1,3 +1,27 @@
 .hidden {
   display: none;
 }
+
+.active {
+  display: block;
+}
+
+[data-app] {
+  display: none;
+}
+
+.opened {
+  display: flex;
+}
+
+// section.active {
+//   margin-top: 150px;
+//   &::before {
+//     display: block;
+//     content: " ";
+//     margin-top: -175px;
+//     height: 5px;
+//     visibility: hidden;
+//     pointer-events: none;
+//   }
+// }
