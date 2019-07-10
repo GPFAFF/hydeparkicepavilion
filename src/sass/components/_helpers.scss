@@ -1,13 +1,15 @@
 .hidden {
+  visibility: hidden;
+  opacity: 0;
   display: none;
+  // transition: opacity 0.3s cubic-bezier(0.61, -0.19, 0.7, -0.11);
 }
 
 .active {
+  opacity: 1;
+  visibility: visible;
   display: block;
-}
-
-[data-app] {
-  display: none;
+  // transition: opacity 0.3s cubic-bezier(0.61, -0.19, 0.7, -0.11);
 }
 
 .opened {
