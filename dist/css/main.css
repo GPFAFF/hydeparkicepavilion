@@ -19,25 +19,27 @@ body {
 /* line 13, src/sass/components/_base.scss */
 html {
   min-height: 100%;
-  background: url("../img/hockey-bg.jpg") no-repeat center center fixed;
+  background: url("../img/hockey-bg.jpg") center;
+  background-repeat: repeat-y;
   height: 100%;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1280px) {
   /* line 13, src/sass/components/_base.scss */
   html {
     background-size: cover;
+    height: auto;
   }
 }
 
-/* line 23, src/sass/components/_base.scss */
+/* line 25, src/sass/components/_base.scss */
 body {
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
   height: auto;
 }
 
-/* line 29, src/sass/components/_base.scss */
+/* line 31, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -45,7 +47,7 @@ button {
   font: inherit;
 }
 
-/* line 36, src/sass/components/_base.scss */
+/* line 38, src/sass/components/_base.scss */
 main {
   margin: 0 auto;
   -webkit-transform: translateY(0%);
@@ -57,7 +59,7 @@ main {
   min-height: 100vh;
 }
 
-/* line 43, src/sass/components/_base.scss */
+/* line 45, src/sass/components/_base.scss */
 main.opened {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
@@ -74,46 +76,51 @@ main.opened {
           flex-direction: column;
 }
 
-/* line 51, src/sass/components/_base.scss */
+/* line 53, src/sass/components/_base.scss */
 main h2 {
-  margin-top: -285px;
-  padding-top: 285px;
-  display: inline-block;
+  padding-top: 80px;
 }
 
-/* line 57, src/sass/components/_base.scss */
+@media (min-width: 800px) {
+  /* line 53, src/sass/components/_base.scss */
+  main h2 {
+    padding-top: 0;
+  }
+}
+
+/* line 61, src/sass/components/_base.scss */
 main section {
   padding: 20px;
 }
 
 @media (min-width: 480px) {
-  /* line 57, src/sass/components/_base.scss */
+  /* line 61, src/sass/components/_base.scss */
   main section {
     padding: 40px;
   }
 }
 
-/* line 63, src/sass/components/_base.scss */
+/* line 67, src/sass/components/_base.scss */
 main section > section {
   padding: 0;
   height: auto;
   min-height: 0;
 }
 
-/* line 71, src/sass/components/_base.scss */
+/* line 75, src/sass/components/_base.scss */
 ul {
   list-style: none;
   padding: 0;
 }
 
-/* line 75, src/sass/components/_base.scss */
+/* line 79, src/sass/components/_base.scss */
 ul a {
   text-decoration: none;
   color: #ffffff;
   display: inline-block;
 }
 
-/* line 80, src/sass/components/_base.scss */
+/* line 84, src/sass/components/_base.scss */
 ul a::after {
   content: "";
   width: 0px;
@@ -124,15 +131,20 @@ ul a::after {
   transition: 300ms;
 }
 
-/* line 89, src/sass/components/_base.scss */
+/* line 93, src/sass/components/_base.scss */
 ul a:hover {
   -webkit-transform: transition 0.2s ease-in;
           transform: transition 0.2s ease-in;
 }
 
-/* line 92, src/sass/components/_base.scss */
+/* line 96, src/sass/components/_base.scss */
 ul a:hover::after {
   width: 100%;
+}
+
+/* line 103, src/sass/components/_base.scss */
+.nav-container {
+  position: relative;
 }
 
 /* line 1, src/sass/components/_nav.scss */
@@ -164,21 +176,22 @@ ul a:hover::after {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  font-size: 20px;
 }
 
-/* line 20, src/sass/components/_nav.scss */
+/* line 21, src/sass/components/_nav.scss */
 .desktop-nav li a {
   text-transform: uppercase;
   text-shadow: 1px 1px 1px #000000;
 }
 
-/* line 23, src/sass/components/_nav.scss */
+/* line 24, src/sass/components/_nav.scss */
 .desktop-nav li a:hover {
   -webkit-transform: transition 0.2s ease-in;
           transform: transition 0.2s ease-in;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   /* line 1, src/sass/components/_nav.scss */
   .desktop-nav {
     display: -webkit-box;
@@ -277,13 +290,13 @@ footer p {
   width: 30px;
   height: 5px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 4px 32px 3px #000000;
-          box-shadow: 0 4px 32px 3px #000000;
+  -webkit-box-shadow: 0 1px 1px #000000;
+          box-shadow: 0 1px 1px #000000;
   border-radius: 20px;
   margin-top: 5px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   /* line 1, src/sass/components/_hamburger.scss */
   .hamburger {
     display: none;
@@ -308,8 +321,8 @@ footer p {
   width: 30px;
   height: 5px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 4px 32px 3px #000000;
-          box-shadow: 0 4px 32px 3px #000000;
+  -webkit-box-shadow: 0 1px 1px #000000;
+          box-shadow: 0 1px 1px #000000;
   border-radius: 20px;
   margin-top: 5px;
 }
@@ -352,16 +365,18 @@ header h1 {
   text-align: left;
   text-transform: uppercase;
   margin: 0;
+  padding-top: 80px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   /* line 4, src/sass/components/_header.scss */
   header h1 {
+    padding-top: 0;
     font-size: 100px;
   }
 }
 
-/* line 22, src/sass/components/_header.scss */
+/* line 24, src/sass/components/_header.scss */
 header h1 span {
   display: block;
 }
@@ -374,51 +389,52 @@ p {
   margin-top: 0;
   color: #ffffff;
   text-shadow: 2px 3px 2px #000000;
+  font-size: 20px;
 }
 
-/* line 12, src/sass/components/_hgroup.scss */
+/* line 13, src/sass/components/_hgroup.scss */
 h2 {
   font-size: 40px;
 }
 
 @media (min-width: 480px) {
-  /* line 12, src/sass/components/_hgroup.scss */
+  /* line 13, src/sass/components/_hgroup.scss */
   h2 {
     font-size: 80px;
   }
 }
 
-/* line 20, src/sass/components/_hgroup.scss */
+/* line 21, src/sass/components/_hgroup.scss */
 h3 {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 @media (min-width: 480px) {
-  /* line 20, src/sass/components/_hgroup.scss */
+  /* line 21, src/sass/components/_hgroup.scss */
   h3 {
     font-size: 40px;
   }
 }
 
-/* line 28, src/sass/components/_hgroup.scss */
+/* line 29, src/sass/components/_hgroup.scss */
 h4 {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 @media (min-width: 480px) {
-  /* line 28, src/sass/components/_hgroup.scss */
+  /* line 29, src/sass/components/_hgroup.scss */
   h4 {
     font-size: 24px;
   }
 }
 
-/* line 36, src/sass/components/_hgroup.scss */
+/* line 37, src/sass/components/_hgroup.scss */
 h5 {
   font-size: 14px;
 }
 
 @media (min-width: 480px) {
-  /* line 36, src/sass/components/_hgroup.scss */
+  /* line 37, src/sass/components/_hgroup.scss */
   h5 {
     font-size: 20px;
   }
@@ -439,7 +455,7 @@ h5 {
   display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   /* line 7, src/sass/components/_logo.scss */
   .logo.mobile {
     display: none;
@@ -504,6 +520,12 @@ h5 {
   text-shadow: none;
 }
 
+/* line 13, src/sass/components/_banner.scss */
+.banner p {
+  font-size: 16px;
+  line-height: 1.25;
+}
+
 /* line 1, src/sass/components/_button.scss */
 .button {
   background-color: #226089;
@@ -513,7 +535,7 @@ h5 {
   text-decoration: none;
   color: #ffffff;
   border-radius: 4px;
-  width: 300px;
+  width: 320px;
   font-weight: 600;
   position: relative;
   margin: 40px auto;
@@ -523,14 +545,21 @@ h5 {
           box-shadow: 0 5px 0 #000000;
 }
 
-/* line 17, src/sass/components/_button.scss */
+@media (min-width: 800px) {
+  /* line 1, src/sass/components/_button.scss */
+  .button {
+    width: 300px;
+  }
+}
+
+/* line 21, src/sass/components/_button.scss */
 .button:active {
   -webkit-box-shadow: none;
           box-shadow: none;
   top: 5px;
 }
 
-/* line 21, src/sass/components/_button.scss */
+/* line 26, src/sass/components/_button.scss */
 .button:hover {
   cursor: pointer;
 }
@@ -538,18 +567,32 @@ h5 {
 /* line 1, src/sass/components/_map.scss */
 .map {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 30px;
   margin-top: 60px;
 }
 
-/* line 8, src/sass/components/_map.scss */
+@media (min-width: 800px) {
+  /* line 1, src/sass/components/_map.scss */
+  .map {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+  }
+}
+
+/* line 14, src/sass/components/_map.scss */
 .map #map {
   height: 400px;
   /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */
+}
+
+/* line 19, src/sass/components/_map.scss */
+.map .contact-information {
+  margin-top: 20px;
 }
 
 /* line 1, src/sass/components/_team.scss */

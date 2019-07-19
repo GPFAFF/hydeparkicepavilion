@@ -6,7 +6,7 @@
   text-decoration: none;
   color: $white;
   border-radius: 4px;
-  width: 300px;
+  width: 320px;
   font-weight: $bold;
   position: relative;
   margin: 40px auto;
@@ -14,10 +14,15 @@
   text-align: center;
   box-shadow: 0 5px 0 $black;
 
+  @media (min-width: $tablet) {
+    width: 300px;
+  }
+
   &:active {
     box-shadow: none;
     top: 5px;
   }
+
   &:hover {
     cursor: pointer;
   }
