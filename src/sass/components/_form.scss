@@ -78,4 +78,28 @@ form {
       }
     }
   }
+
+  .select-box {
+    position: relative;
+    select {
+        /* for Firefox */
+      -moz-appearance: none;
+      /* for Chrome */
+      -webkit-appearance: none;
+    }
+
+    &::after {
+      border: 2px solid #333;
+      border-right: 0;
+      border-top: 0;
+      content: '';
+      height: 10px;
+      position: absolute;
+      right: 20px;
+      top: 35px;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      width: 10px;
+    }
+  }
 }

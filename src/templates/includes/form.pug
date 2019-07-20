@@ -22,7 +22,7 @@ form(
       required
     )
     label(for="name")
-      span Player"s Name
+      span Player's Name
   p.form-group
     input(
       type="text", 
@@ -31,8 +31,8 @@ form(
       required
     )
     label(for="surname")
-      span Parent"s Name
-  p.form-group
+      span Parent's Name
+  p.form-group.select-box
     select(name="age", id="age", required)
       option(value="")
       option(value="4") 4
@@ -44,7 +44,7 @@ form(
       option(value="10") 10
     label(for="age")
       span Age
-  p.form-group
+  p.form-group.select-box
     select(name="skating", id="skating", required)
       option(value="")
       option(value="none") None
@@ -55,6 +55,7 @@ form(
       span Skating Experince
   p.form-group
     input(
+      type="text"
       name="message", 
       id="message",
       required
