@@ -1,69 +1,114 @@
 form(
-  name='contact', 
+  name='Learn To Skate', 
   method='POST', 
   data-netlify='true'
   action="/success"
   netlify-honeypot="bot-field"
   data-netlify-recaptcha="true"
 )
-  h3 Hyde Park Learn to Skate, Mite and Squirt Programs
+  h3 
+    span Hyde Park Learn to Skate
+    span Mite and Squirt Programs
+
   p.hidden
+    input(name="bot-field")
     label
-      | Don't fill this out if you're human: 
-      input(name="bot-field")
-  p
+      span Don't fill this out if you're human 
+  p.form-group
+    input(
+      type='text', 
+      id="name" 
+      name='name' 
+      required
+    )
     label(for="name")
-      | Player's Name: 
-      input(type='text', name='name' required)
-  p
+      span Player's Name
+  p.form-group
+    input(
+      type='text', 
+      id="surname", 
+      name='surname', 
+      required
+    )
     label(for="surname")
-      | Parent's Name: 
-      input(type='text', name='surname' required)
-  p
+      span Parent's Name
+  p.form-group
+    select(name='age', id="age", required)
+      option(value="")
+      option(value="4") 4
+      option(value="5") 5
+      option(value="6") 6
+      option(value="7") 7
+      option(value="8") 8
+      option(value="9") 9
+      option(value="10") 10
     label(for="age")
-      | Age:
-      select(name='age[]', multiple='' required)
-        option(value="choose") Choose
-        option(value="4") 4
-        option(value="5") 5
-        option(value="6") 6
-        option(value="7") 7
-        option(value="8") 8
-        option(value="9") 9
-        option(value="10") 10
-  p
+      span Age
+  p.form-group
+    select(name='skating', id="skating", required)
+      option(value="")
+      option(value='none') None
+      option(value='oneYear') 1 Year
+      option(value='twoYears') 2 Years
+      option(value='threeYears') 3 Years or greater
     label(for="skating")
-      | Skating Experince: 
-      select(name='skating[]', multiple='' required)
-        option(value='none') None
-        option(value='oneYear') 1 Year
-        option(value='twoYears') 2 Years
-        option(value='threeYears') 3 Years or greater
-  p
-    label
-      | Describe your child's skill level or skating experience: 
-      textarea(name='message' required)
-  p
+      span Skating Experince
+  p.form-group
+    textarea(
+      name='message', 
+      id="message",
+      required
+    )
+    label(for="message")
+      span Describe your child's skill level or skating experience
+  p.form-group
+    input(
+      type='text', 
+      name='address',
+      id="address",  
+      required
+    )
     label(for="address")
-      | Address: 
-      input(type='text', name='Address' required)
-  p
+      span Address
+  p.form-group
+    input(
+      type='text', 
+      name='city',
+      id="city",  
+      required
+    )
     label(for="city")
-      | City: 
-      input(type='text', name='city' required)
-  p
+      span City
+  p.form-group
+    input(
+      type='text', 
+      name='state', 
+      id="state",  
+      required
+    )
     label(for="state")
-      | State: 
-      input(type='text', name='state' required)
-  p
+      span State
+  p.form-group
+    input(
+      type='text', 
+      name='zip', 
+      id="zip",  
+      required
+    )
     label(for="zip")
-      | Zip Code: 
-      input(type='text', name='zip' required)
-  p
+      span Zip Code
+  p.form-group
+    input(
+      type='text', 
+      name='phone', 
+      id="phone",  
+      required
+    )
     label(for="phone")
-      | Phone Number: 
-      input(type='text', name='phone' required)
+      span Phone Number
+
   div(data-netlify-recaptcha="true" required)
+
   div(role='listitem', data-required='true')
     div(role="heading" aria-describedby="headerText")
       | Terms & Conditions
@@ -78,6 +123,5 @@ form(
             .quantumWizTogglePapercheckboxEl.docssharedWizToggleLabeledControl.freebirdThemedCheckbox.freebirdThemedCheckboxDarkerDisabled.freebirdFormviewerViewItemsCheckboxControl( aria-label='I agree to the terms and conditions below', tabindex='0', aria-describedby='  i40', role='checkbox', aria-checked='false')
           div(dir='auto') I agree to the terms and conditions below
         input(type='hidden', name='entry.647602078', jsname='ekGZBc', value='', disabled='true')
- 
   p
     button.button(type='submit') Send

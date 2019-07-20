@@ -12,6 +12,7 @@ p {
 
 h2 {
   font-size: 40px;
+  text-transform: uppercase;
 
   @media (min-width: $mobile) {
     font-size: 80px;

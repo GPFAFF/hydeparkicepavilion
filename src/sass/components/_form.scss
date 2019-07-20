@@ -1,0 +1,85 @@
+form {
+  background-color: #eee;
+  border-radius: 4px;
+  box-shadow: $shadow;
+  text-align: left;
+  margin: 0 auto;
+  padding: 20px;
+
+  h3 {
+    color: $black;
+    text-shadow: none;
+    line-height: 1.5;
+    text-align: center;
+
+    span {
+      display: block;
+    }
+  }
+
+  .form-group {
+    display: inline-block;
+    width: 100%;
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      text-align: left;
+      padding: 20px 0 0 20px;
+      height: 80px;
+      border: 1px solid $black;
+      border-radius: 4px;
+
+      &:focus {
+        box-shadow: 0 0 1px 2px #3b99fc;
+        
+        + label > span {
+          font-size: 12px;
+          top: -70px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      &.floating-label {
+        + label > span {
+          font-size: 12px;
+          top: -70px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    select {
+      height: 60px;
+    }
+
+    input + label,
+    select + label,
+    textarea + label {
+      display: block;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      transition: width .4s ease;
+      white-space: nowrap;
+
+      > span {
+        font-size: 16px;
+        left: 20px;
+        margin: 0;
+        position: absolute;
+        top: -43px;
+        transition: top .2s ease,font-size .2s ease,color .2s ease;
+        line-height: 2;
+        color: $black;
+        text-shadow: none;
+      }
+    }
+  }
+}
