@@ -1,7 +1,7 @@
 form(
-  name='Learn To Skate', 
-  method='POST', 
-  data-netlify='true'
+  name="Learn To Skate", 
+  method="POST", 
+  data-netlify="true"
   action="/success"
   netlify-honeypot="bot-field"
   data-netlify-recaptcha="true"
@@ -16,24 +16,24 @@ form(
       span Don't fill this out if you're human 
   p.form-group
     input(
-      type='text', 
-      id="name" 
-      name='name' 
+      type="text", 
+      id="name", 
+      name="name",
       required
     )
     label(for="name")
-      span Player's Name
+      span Player"s Name
   p.form-group
     input(
-      type='text', 
+      type="text", 
       id="surname", 
-      name='surname', 
+      name="surname", 
       required
     )
     label(for="surname")
-      span Parent's Name
+      span Parent"s Name
   p.form-group
-    select(name='age', id="age", required)
+    select(name="age", id="age", required)
       option(value="")
       option(value="4") 4
       option(value="5") 5
@@ -45,26 +45,26 @@ form(
     label(for="age")
       span Age
   p.form-group
-    select(name='skating', id="skating", required)
+    select(name="skating", id="skating", required)
       option(value="")
-      option(value='none') None
-      option(value='oneYear') 1 Year
-      option(value='twoYears') 2 Years
-      option(value='threeYears') 3 Years or greater
+      option(value="none") None
+      option(value="oneYear") 1 Year
+      option(value="twoYears") 2 Years
+      option(value="threeYears") 3 Years or greater
     label(for="skating")
       span Skating Experince
   p.form-group
-    textarea(
-      name='message', 
+    input(
+      name="message", 
       id="message",
       required
     )
     label(for="message")
-      span Describe your child's skill level or skating experience
+      span Describe your child"s skill level or skating experience
   p.form-group
     input(
-      type='text', 
-      name='address',
+      type="text", 
+      name="address",
       id="address",  
       required
     )
@@ -72,8 +72,8 @@ form(
       span Address
   p.form-group
     input(
-      type='text', 
-      name='city',
+      type="text", 
+      name="city",
       id="city",  
       required
     )
@@ -81,8 +81,8 @@ form(
       span City
   p.form-group
     input(
-      type='text', 
-      name='state', 
+      type="text", 
+      name="state", 
       id="state",  
       required
     )
@@ -90,8 +90,8 @@ form(
       span State
   p.form-group
     input(
-      type='text', 
-      name='zip', 
+      type="text", 
+      name="zip", 
       id="zip",  
       required
     )
@@ -99,8 +99,8 @@ form(
       span Zip Code
   p.form-group
     input(
-      type='text', 
-      name='phone', 
+      type="text", 
+      name="phone", 
       id="phone",  
       required
     )
@@ -109,19 +109,19 @@ form(
 
   div(data-netlify-recaptcha="true" required)
 
-  div(role='listitem', data-required='true')
+  div(role="listitem", data-required="true")
     div(role="heading" aria-describedby="headerText")
       | Terms & Conditions
-      div(id='headerText', dir='auto')
+      div(id="headerText", dir="auto")
         | I am aware that participating in the ice skating class(es) involves inherent risks of physical injury, and I voluntarily assume all such risks. In consideration of Hyde Park Ice Pavilion allowing me to participate in the ice skating class(es) in connection with the institution. I agree to release and hold harmless Hyde Park Ice Pavilion and all of their duly authorized agents, servants, and employees, from any and all liability, claims or causes of action of whatever kind and nature, resulting from my participation in, or in any way connected with my participation in the ice skating class(es).
-  input(type='hidden')
-  div(jsname='JNdkSc', role='list', aria-labelledby='i36', aria-describedby='i.desc.524246702 i.err.524246702 i.req.524246702', aria-invalid='true')
-    div(role='listitem', data-value='I agree to the terms and conditions below')
+  input(type="hidden")
+  div(jsname="JNdkSc", role="list", aria-labelledby="i36", aria-describedby="i.desc.524246702 i.err.524246702 i.req.524246702", aria-invalid="true")
+    div(role="listitem", data-value="I agree to the terms and conditions below")
       .freebirdFormviewerViewItemsCheckboxChoice
         label.docssharedWizToggleLabeledContainer.freebirdFormviewerViewItemsCheckboxContainer
           .docssharedWizToggleLabeledLabelWrapper.exportLabelWrapper
-            .quantumWizTogglePapercheckboxEl.docssharedWizToggleLabeledControl.freebirdThemedCheckbox.freebirdThemedCheckboxDarkerDisabled.freebirdFormviewerViewItemsCheckboxControl( aria-label='I agree to the terms and conditions below', tabindex='0', aria-describedby='  i40', role='checkbox', aria-checked='false')
-          div(dir='auto') I agree to the terms and conditions below
-        input(type='hidden', name='entry.647602078', jsname='ekGZBc', value='', disabled='true')
+            .quantumWizTogglePapercheckboxEl.docssharedWizToggleLabeledControl.freebirdThemedCheckbox.freebirdThemedCheckboxDarkerDisabled.freebirdFormviewerViewItemsCheckboxControl( aria-label="I agree to the terms and conditions below", tabindex="0", aria-describedby="  i40", role="checkbox", aria-checked="false")
+          div(dir="auto") I agree to the terms and conditions below
+        input(type="hidden", name="entry.647602078", jsname="ekGZBc", value=", disabled="true")
   p
-    button.button(type='submit') Send
+    button.button(type="submit") Send

@@ -54,10 +54,6 @@ form {
       }
     }
 
-    select {
-      height: 60px;
-    }
-
     input + label,
     select + label,
     textarea + label {
@@ -74,7 +70,7 @@ form {
         left: 20px;
         margin: 0;
         position: absolute;
-        top: -43px;
+        top: -55px;
         transition: top .2s ease,font-size .2s ease,color .2s ease;
         line-height: 2;
         color: $black;
