@@ -12,17 +12,17 @@ form(
       | Don't fill this out if you're human: 
       input(name="bot-field")
   p
-    label
+    label(for="name")
       | Player's Name: 
-      input(type='text', name='name')
+      input(type='text', name='name' required)
   p
-    label
+    label(for="surname")
       | Parent's Name: 
-      input(type='text', name='parentsName')
+      input(type='text', name='surname' required)
   p
     label(for="age")
       | Age:
-      select(name='age[]', multiple='')
+      select(name='age[]', multiple='' required)
         option(value="choose") Choose
         option(value="4") 4
         option(value="5") 5
@@ -34,7 +34,7 @@ form(
   p
     label(for="skating")
       | Skating Experince: 
-      select(name='skating[]', multiple='')
+      select(name='skating[]', multiple='' required)
         option(value='none') None
         option(value='oneYear') 1 Year
         option(value='twoYears') 2 Years
@@ -42,28 +42,28 @@ form(
   p
     label
       | Describe your child's skill level or skating experience: 
-      textarea(name='message')
+      textarea(name='message' required)
   p
     label(for="address")
       | Address: 
-      input(type='text', name='Address')
+      input(type='text', name='Address' required)
   p
     label(for="city")
       | City: 
-      input(type='text', name='city')
+      input(type='text', name='city' required)
   p
     label(for="state")
       | State: 
-      input(type='text', name='state')
+      input(type='text', name='state' required)
   p
     label(for="zip")
       | Zip Code: 
-      input(type='text', name='zip')
+      input(type='text', name='zip' required)
   p
     label(for="phone")
       | Phone Number: 
-      input(type='text', name='phone')
-  div(data-netlify-recaptcha="true")
+      input(type='text', name='phone' required)
+  div(data-netlify-recaptcha="true" required)
   div(role='listitem', data-required='true')
     div(role="heading" aria-describedby="headerText")
       | Terms & Conditions
