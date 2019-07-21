@@ -22,7 +22,6 @@ closeButton.addEventListener('click', function () {
 page.addEventListener('click', function (e) {
 	var evTarget = e.target;
 	if ((evTarget !== mobileNav) && (mobileNav.classList.contains('opened')) && (evTarget !== hamburgerButton) && (evTarget.parentNode !== hamburgerButton)) {
-		console.log(hamburgerButton.firstChild);
 		hamburgerButton.classList.remove('hidden');
 		mobileNav.classList.remove('opened');
 		mobileNav.classList.add('hidden');
