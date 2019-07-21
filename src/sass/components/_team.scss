@@ -6,7 +6,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   .member {
-    background-color: #eee;
+    background-color: $whiteBg;
     padding: 40px;
     border-radius: 4px;
     box-shadow: $shadow;

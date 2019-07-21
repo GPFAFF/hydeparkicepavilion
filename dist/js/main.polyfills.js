@@ -174,8 +174,6 @@ if (!Element.prototype.matches) {
 }
 const form_inputs = [].slice.call(document.querySelectorAll('input[type="text"], select, textarea'));
 
-console.log('f', form_inputs);
-
 form_inputs.map(input => {
   input.addEventListener('change', (e) => {
     if (input.value) {
@@ -239,7 +237,6 @@ closeButton.addEventListener('click', (function () {
 page.addEventListener('click', (function (e) {
 	var evTarget = e.target;
 	if ((evTarget !== mobileNav) && (mobileNav.classList.contains('opened')) && (evTarget !== hamburgerButton) && (evTarget.parentNode !== hamburgerButton)) {
-		console.log(hamburgerButton.firstChild);
 		hamburgerButton.classList.remove('hidden');
 		mobileNav.classList.remove('opened');
 		mobileNav.classList.add('hidden');

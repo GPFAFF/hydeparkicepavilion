@@ -4,6 +4,10 @@
   height: 85px;
   position: absolute;
 
+  &.visuallyhidden {
+    text-indent: -10000px;
+  }
+
   &.mobile {
     right: 30px;
     top: 20px;

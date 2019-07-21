@@ -254,13 +254,17 @@ ul a:hover::after {
 }
 
 /* line 8, src/sass/components/_helpers.scss */
+.visuallyhidden {
+  text-indent: -10000px;
+}
+
+/* line 12, src/sass/components/_helpers.scss */
 .active {
-  opacity: 1;
   visibility: visible;
   display: block;
 }
 
-/* line 15, src/sass/components/_helpers.scss */
+/* line 18, src/sass/components/_helpers.scss */
 .opened {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -455,6 +459,11 @@ h5 {
 }
 
 /* line 7, src/sass/components/_logo.scss */
+.logo.visuallyhidden {
+  text-indent: -10000px;
+}
+
+/* line 11, src/sass/components/_logo.scss */
 .logo.mobile {
   right: 30px;
   top: 20px;
@@ -462,7 +471,7 @@ h5 {
 }
 
 @media (min-width: 800px) {
-  /* line 7, src/sass/components/_logo.scss */
+  /* line 11, src/sass/components/_logo.scss */
   .logo.mobile {
     display: none;
   }
@@ -577,6 +586,9 @@ h5 {
   grid-template-rows: 1fr;
   grid-column-gap: 30px;
   margin-top: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 4px;
 }
 
 @media (min-width: 800px) {
@@ -588,17 +600,23 @@ h5 {
   }
 }
 
-/* line 14, src/sass/components/_map.scss */
+/* line 17, src/sass/components/_map.scss */
 .map #map {
   height: 400px;
-  /* The height is 400 pixels */
   width: 100%;
-  /* The width is the width of the web page */
+  border: 2px solid #000000;
 }
 
-/* line 19, src/sass/components/_map.scss */
+/* line 23, src/sass/components/_map.scss */
 .map .contact-information {
   margin-top: 20px;
+}
+
+/* line 26, src/sass/components/_map.scss */
+.map .contact-information h3,
+.map .contact-information p {
+  color: #000000;
+  text-shadow: none;
 }
 
 /* line 1, src/sass/components/_team.scss */
@@ -612,7 +630,7 @@ h5 {
 
 /* line 8, src/sass/components/_team.scss */
 .team .member {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 40px;
   border-radius: 4px;
   -webkit-box-shadow: 0 4px 32px 3px #000000;
@@ -636,7 +654,7 @@ h5 {
 
 /* line 1, src/sass/components/_form.scss */
 form {
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 4px;
   -webkit-box-shadow: 0 4px 32px 3px #000000;
           box-shadow: 0 4px 32px 3px #000000;
