@@ -6,7 +6,7 @@
   text-decoration: none;
   color: $white;
   border-radius: 4px;
-  width: 320px;
+  width: 100%;
   font-weight: $bold;
   position: relative;
   margin: 40px auto;
@@ -15,7 +15,7 @@
   box-shadow: 0 5px 0 $black;
 
   @media (min-width: $tablet) {
-    width: 300px;
+    width: 320px;
   }
 
   &:active {

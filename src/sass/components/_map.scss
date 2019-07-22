@@ -29,4 +29,11 @@
       text-shadow: none;
     }
   }
+
+  .directions {
+    width: 100%;
+    > button {
+      width: auto;
+    }
+  };
 }
