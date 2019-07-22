@@ -44,6 +44,7 @@ main {
   transition-timing-function: ease-out;
   transition: 0.2s;
   min-height: 100vh;
+  height: 100vh;
 
   &.opened {
     transform: translateY(0%);
@@ -51,6 +52,15 @@ main {
     transition: 0.2s;
     display: flex;
     flex-direction: column;
+    #home.active {
+      > .chevron {
+        padding: 70px 0 250px;
+
+        @media (min-width: $mobile) {
+          padding: 200px 0 450px;
+        }
+      }
+    }
   }
 
   h2 {
@@ -63,6 +73,8 @@ main {
 
   section {
     padding: 20px;
+    z-index: 10;
+
     @media (min-width: $mobile) {
       padding: 40px;
     }
@@ -71,6 +83,7 @@ main {
       padding: 0;
       height: auto;
       min-height: 0;
+      border: 2px;
     }
   }
 }
@@ -105,4 +118,5 @@ ul {
 
 .nav-container {
   position: relative;
+  z-index: 20;
 }

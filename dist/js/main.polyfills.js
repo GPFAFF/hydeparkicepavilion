@@ -18,152 +18,152 @@ const easeInOutQuad = (t, b, c, d) => {
   return -c / 2 * (t * (t - 2) - 1) + b
 }
 
-// const jumper = () => {
-//   // private variable cache
-//   // no variables are created during a jump, preventing memory leaks
+const jumper = () => {
+  // private variable cache
+  // no variables are created during a jump, preventing memory leaks
 
-//   let element         // element to scroll to                   (node)
+  let element         // element to scroll to                   (node)
 
-//   let start           // where scroll starts                    (px)
-//   let stop            // where scroll stops                     (px)
+  let start           // where scroll starts                    (px)
+  let stop            // where scroll stops                     (px)
 
-//   let offset          // adjustment from the stop position      (px)
-//   let easing          // easing function                        (function)
-//   let a11y            // accessibility support flag             (boolean)
+  let offset          // adjustment from the stop position      (px)
+  let easing          // easing function                        (function)
+  let a11y            // accessibility support flag             (boolean)
 
-//   let distance        // distance of scroll                     (px)
-//   let duration        // scroll duration                        (ms)
+  let distance        // distance of scroll                     (px)
+  let duration        // scroll duration                        (ms)
 
-//   let timeStart       // time scroll started                    (ms)
-//   let timeElapsed     // time spent scrolling thus far          (ms)
+  let timeStart       // time scroll started                    (ms)
+  let timeElapsed     // time spent scrolling thus far          (ms)
 
-//   let next            // next scroll position                   (px)
+  let next            // next scroll position                   (px)
 
-//   let callback        // to call when done scrolling            (function)
+  let callback        // to call when done scrolling            (function)
 
-//   // scroll position helper
+  // scroll position helper
 
-//   function location() {
-//     return window.scrollY || window.pageYOffset
-//   }
+  function location() {
+    return window.scrollY || window.pageYOffset
+  }
 
-//   // element offset helper
+  // element offset helper
 
-//   function top(element) {
-//     return element.getBoundingClientRect().top + start
-//   }
+  function top(element) {
+    return element.getBoundingClientRect().top + start
+  }
 
-//   // rAF loop helper
+  // rAF loop helper
 
-//   function loop(timeCurrent) {
-//     // store time scroll started, if not started already
-//     if (!timeStart) {
-//       timeStart = timeCurrent
-//     }
+  function loop(timeCurrent) {
+    // store time scroll started, if not started already
+    if (!timeStart) {
+      timeStart = timeCurrent
+    }
 
-//     // determine time spent scrolling so far
-//     timeElapsed = timeCurrent - timeStart
+    // determine time spent scrolling so far
+    timeElapsed = timeCurrent - timeStart
 
-//     // calculate next scroll position
-//     next = easing(timeElapsed, start, distance, duration)
+    // calculate next scroll position
+    next = easing(timeElapsed, start, distance, duration)
 
-//     // scroll to it
-//     window.scrollTo(0, next)
+    // scroll to it
+    window.scrollTo(0, next)
 
-//     // check progress
-//     timeElapsed < duration
-//       ? window.requestAnimationFrame(loop)       // continue scroll loop
-//       : done()                                   // scrolling is done
-//   }
+    // check progress
+    timeElapsed < duration
+      ? window.requestAnimationFrame(loop)       // continue scroll loop
+      : done()                                   // scrolling is done
+  }
 
-//   // scroll finished helper
+  // scroll finished helper
 
-//   function done() {
-//     // account for rAF time rounding inaccuracies
-//     window.scrollTo(0, start + distance)
+  function done() {
+    // account for rAF time rounding inaccuracies
+    window.scrollTo(0, start + distance)
 
-//     // if scrolling to an element, and accessibility is enabled
-//     if (element && a11y) {
-//       // add tabindex indicating programmatic focus
-//       element.setAttribute('tabindex', '-1')
+    // if scrolling to an element, and accessibility is enabled
+    if (element && a11y) {
+      // add tabindex indicating programmatic focus
+      element.setAttribute('tabindex', '-1')
 
-//       // focus the element
-//       element.focus()
-//     }
+      // focus the element
+      element.focus()
+    }
 
-//     // if it exists, fire the callback
-//     if (typeof callback === 'function') {
-//       callback()
-//     }
+    // if it exists, fire the callback
+    if (typeof callback === 'function') {
+      callback()
+    }
 
-//     // reset time for next jump
-//     timeStart = false
-//   }
+    // reset time for next jump
+    timeStart = false
+  }
 
-//   // API
+  // API
 
-//   function jump(target, options = {}) {
-//     // resolve options, or use defaults
-//     duration = options.duration || 1000
-//     offset = options.offset || 0
-//     callback = options.callback                       // "undefined" is a suitable default, and won't be called
-//     easing = options.easing || easeInOutQuad
-//     a11y = options.a11y || false
+  function jump(target, options = {}) {
+    // resolve options, or use defaults
+    duration = options.duration || 1000
+    offset = options.offset || 0
+    callback = options.callback                       // "undefined" is a suitable default, and won't be called
+    easing = options.easing || easeInOutQuad
+    a11y = options.a11y || false
 
-//     // cache starting position
-//     start = location()
+    // cache starting position
+    start = location()
 
-//     // resolve target
-//     switch (typeof target) {
-//       // scroll from current position
-//       case 'number':
-//         element = undefined           // no element to scroll to
-//         a11y = false                  // make sure accessibility is off
-//         stop = start + target
-//         break
+    // resolve target
+    switch (typeof target) {
+      // scroll from current position
+      case 'number':
+        element = undefined           // no element to scroll to
+        a11y = false                  // make sure accessibility is off
+        stop = start + target
+        break
 
-//       // scroll to element (node)
-//       // bounding rect is relative to the viewport
-//       case 'object':
-//         element = target
-//         stop = top(element)
-//         break
+      // scroll to element (node)
+      // bounding rect is relative to the viewport
+      case 'object':
+        element = target
+        stop = top(element)
+        break
 
-//       // scroll to element (selector)
-//       // bounding rect is relative to the viewport
-//       case 'string':
-//         element = document.querySelector(target)
-//         stop = top(element)
-//         break
-//     }
+      // scroll to element (selector)
+      // bounding rect is relative to the viewport
+      case 'string':
+        element = document.querySelector(target)
+        stop = top(element)
+        break
+    }
 
-//     // resolve scroll distance, accounting for offset
-//     distance = stop - start + offset
+    // resolve scroll distance, accounting for offset
+    distance = stop - start + offset
 
-//     // resolve duration
-//     switch (typeof options.duration) {
-//       // number in ms
-//       case 'number':
-//         duration = options.duration
-//         break
+    // resolve duration
+    switch (typeof options.duration) {
+      // number in ms
+      case 'number':
+        duration = options.duration
+        break
 
-//       // function passed the distance of the scroll
-//       case 'function':
-//         duration = options.duration(distance)
-//         break
-//     }
+      // function passed the distance of the scroll
+      case 'function':
+        duration = options.duration(distance)
+        break
+    }
 
-//     // start the loop
-//     window.requestAnimationFrame(loop)
-//   }
+    // start the loop
+    window.requestAnimationFrame(loop)
+  }
 
-//   // expose only the jump method
-//   return jump
-// }
+  // expose only the jump method
+  return jump
+}
 
-// // export singleton
+// export singleton
 
-// const singleton = jumper()
+const singleton = jumper()
 
 /**
  * Element.matches() polyfill (simple version)
@@ -183,29 +183,22 @@ form_inputs.map(input => {
     }
   })
 });
-const dataApps = [].slice.call(document.querySelectorAll('[data-app]'));
+const chevron = document.querySelector('.chevron');
 
-document.addEventListener('click',  (event) => {
-  if (!event.target.className.includes('link')) return;
-  const href = event.target.getAttribute('href');
-  const target = dataApps.find(x => `#${x.getAttribute('data-app')}` === href);
-  dataApps.map(item => {
-    item.classList.add('hidden');
-    item.classList.remove('active');
-  });
-  target.classList.add('active');
-  target.classList.remove('hidden');
-  const targetHeight = target.offsetHeight
-  target.style.marginTop = `${-targetHeight / 2}px`;
-  target.style.paddingTop = `${(targetHeight / 2) + 50}px`;
-  target.style.transition = 'opacity 0.3s cubic-bezier(0.61, -0.19, 0.7, -0.11)';
-});
-
-dataApps.map(item => item.classList.add('hidden'));
-dataApps[0].classList.remove('hidden');
-dataApps[0].classList.add('active');
-
-
+chevron.addEventListener('click', (event) => {
+  event.preventDefault();
+  console.log('click');
+  if (!event.target.className.includes('chevron')) return;
+  console.log('chevron')
+  const info = document.querySelector('.rink-info');
+  singleton(info, {
+    duration: 1000,
+    offset: 0,
+    callback: undefined,
+    easing: easeInOutQuad,
+    a11y: false
+  })
+})
 function initMap() {
   var hydePark = {lat: 43.097672, lng: -79.020234};
   var map = new google.maps.Map(
@@ -244,3 +237,25 @@ page.addEventListener('click', (function (e) {
 		page.classList.remove('opened');
 	}
 }));
+
+const dataApps = [].slice.call(document.querySelectorAll('[data-app]'));
+
+document.addEventListener('click',  (event) => {
+  if (!event.target.className.includes('link')) return;
+  const href = event.target.getAttribute('href');
+  const target = dataApps.find(x => `#${x.getAttribute('data-app')}` === href);
+  dataApps.map(item => {
+    item.classList.add('hidden');
+    item.classList.remove('active');
+  });
+  target.classList.add('active');
+  target.classList.remove('hidden');
+  const targetHeight = target.offsetHeight
+  target.style.marginTop = `${-targetHeight / 2}px`;
+  target.style.paddingTop = `${(targetHeight / 2) + 50}px`;
+  target.style.transition = 'opacity 0.3s cubic-bezier(0.61, -0.19, 0.7, -0.11)';
+});
+
+dataApps.map(item => item.classList.add('hidden'));
+dataApps[0].classList.remove('hidden');
+dataApps[0].classList.add('active');
