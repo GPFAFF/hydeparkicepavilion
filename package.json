@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.4.4",
+    "axios": "^0.18.1",
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -41,6 +42,9 @@
     "browserify": "^16.2.3",
     "gulp-babel": "^8.0.0",
     "gulp-browserify": "^0.5.1",
-    "gulp-imagemin": "^5.0.3"
+    "gulp-imagemin": "^5.0.3",
+    "js-yaml": "^3.13.1",
+    "shell-quote": "^1.6.1",
+    "uglify-js": "^2.6.0"
   }
 }
