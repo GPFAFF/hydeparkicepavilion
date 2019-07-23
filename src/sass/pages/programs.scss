@@ -1,3 +1,7 @@
 .buttons {
-  display: flex;
+  display: block;
+
+  // @media (min-width: $tablet) {
+  //   display: flex;
+  // }
 }

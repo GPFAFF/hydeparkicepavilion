@@ -576,7 +576,16 @@ h5 {
 }
 
 /* line 1, src/sass/components/_button.scss */
-.button {
+.button-container,
+.buttons,
+.directions {
+  width: 100%;
+}
+
+/* line 5, src/sass/components/_button.scss */
+.button-container .button,
+.buttons .button,
+.directions .button {
   background-color: #226089;
   text-transform: uppercase;
   font-size: 20px;
@@ -584,7 +593,7 @@ h5 {
   text-decoration: none;
   color: #ffffff;
   border-radius: 4px;
-  width: 100%;
+  width: auto;
   font-weight: 600;
   position: relative;
   margin: 40px auto;
@@ -595,21 +604,27 @@ h5 {
 }
 
 @media (min-width: 769px) {
-  /* line 1, src/sass/components/_button.scss */
-  .button {
+  /* line 5, src/sass/components/_button.scss */
+  .button-container .button,
+  .buttons .button,
+  .directions .button {
     width: 320px;
   }
 }
 
-/* line 21, src/sass/components/_button.scss */
-.button:active {
+/* line 25, src/sass/components/_button.scss */
+.button-container .button:active,
+.buttons .button:active,
+.directions .button:active {
   -webkit-box-shadow: none;
           box-shadow: none;
   top: 5px;
 }
 
-/* line 26, src/sass/components/_button.scss */
-.button:hover {
+/* line 30, src/sass/components/_button.scss */
+.button-container .button:hover,
+.buttons .button:hover,
+.directions .button:hover {
   cursor: pointer;
   background-color: #184360;
 }
@@ -836,11 +851,21 @@ form .checkbox-container label {
 }
 
 /* line 111, src/sass/components/_form.scss */
+form .captcha {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 116, src/sass/components/_form.scss */
 form .select-box {
   position: relative;
 }
 
-/* line 113, src/sass/components/_form.scss */
+/* line 118, src/sass/components/_form.scss */
 form .select-box select {
   /* for Firefox */
   -moz-appearance: none;
@@ -848,7 +873,7 @@ form .select-box select {
   -webkit-appearance: none;
 }
 
-/* line 120, src/sass/components/_form.scss */
+/* line 125, src/sass/components/_form.scss */
 form .select-box::after {
   border: 2px solid #333;
   border-right: 0;
@@ -861,6 +886,19 @@ form .select-box::after {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   width: 10px;
+}
+
+/* line 140, src/sass/components/_form.scss */
+form .button.form {
+  width: 100%;
+  margin-top: 0;
+}
+
+@media (min-width: 769px) {
+  /* line 140, src/sass/components/_form.scss */
+  form .button.form {
+    width: 320px;
+  }
 }
 
 /* line 1, src/sass/pages/rent-ice.scss */
@@ -894,9 +932,7 @@ form .select-box::after {
 
 /* line 1, src/sass/pages/programs.scss */
 .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 
 /* line 1, src/sass/pages/home.scss */

@@ -1,30 +1,35 @@
-.button {
-  background-color: $blue;
-  text-transform: uppercase;
-  font-size: 20px;
-  padding: 20px;
-  text-decoration: none;
-  color: $white;
-  border-radius: 4px;
+.button-container,
+.buttons,
+.directions {
   width: 100%;
-  font-weight: $bold;
-  position: relative;
-  margin: 40px auto;
-  display: block;
-  text-align: center;
-  box-shadow: 0 5px 0 $black;
+  .button {
+    background-color: $blue;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: $white;
+    border-radius: 4px;
+    width: auto;
+    font-weight: $bold;
+    position: relative;
+    margin: 40px auto;
+    display: block;
+    text-align: center;
+    box-shadow: 0 5px 0 $black;
 
-  @media (min-width: $tablet) {
-    width: 320px;
-  }
+    @media (min-width: $tablet) {
+      width: 320px;
+    }
 
-  &:active {
-    box-shadow: none;
-    top: 5px;
-  }
+    &:active {
+      box-shadow: none;
+      top: 5px;
+    }
 
-  &:hover {
-    cursor: pointer;
-    background-color: darken($blue, 10%);
+    &:hover {
+      cursor: pointer;
+      background-color: darken($blue, 10%);
+    }
   }
 }

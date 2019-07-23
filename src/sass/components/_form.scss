@@ -136,4 +136,13 @@ form {
       width: 10px;
     }
   }
+
+  .button.form{
+    width: 100%;
+    margin-top: 0;
+
+    @media (min-width: $tablet) {
+      width: 320px;
+    }
+  }
 }

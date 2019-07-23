@@ -94,6 +94,10 @@
           <input type="text" id="surname" name="surname" required>
           <label for="surname"><span>Parent's Name</span></label>
         </p>
+        <p class="form-group">
+          <input type="text" id="email" name="email" required>
+          <label for="email"><span>Email Address</span></label>
+        </p>
         <p class="form-group select-box">
           <select name="age" id="age" required>
             <option value=""></option>
@@ -111,9 +115,9 @@
           <select name="skating" id="skating" required>
             <option value=""></option>
             <option value="none">None</option>
-            <option value="oneYear">1 Year</option>
-            <option value="twoYears">2 Years</option>
-            <option value="threeYears">3 Years or greater</option>
+            <option value="1">1 Year</option>
+            <option value="2">2 Years</option>
+            <option value="3 or greater">3 Years or greater</option>
           </select>
           <label for="skating"><span>Years Experince</span></label>
         </p>
@@ -122,7 +126,7 @@
           <label for="message"><span>Describe your child's experience</span></label>
         </p>
         <p class="form-group">
-          <input type="text" name="Address" id="address" required>
+          <input type="text" name="address" id="address" required>
           <label for="address"><span>Address</span></label>
         </p>
         <p class="form-group">
@@ -143,13 +147,13 @@
         </p>
         <p class="checkbox">I am aware that participating in the ice skating class(es) involves inherent risks of physical injury, and I voluntarily assume all such risks. In consideration of Hyde Park Ice Pavilion allowing me to participate in the ice skating class(es) in connection with the institution. I agree to release and hold harmless Hyde Park Ice Pavilion and all of their duly authorized agents, servants, and employees, from any and all liability, claims or causes of action of whatever kind and nature, resulting from my participation in, or in any way connected with my participation in the ice skating class(es).
           <div class="checkbox-container">
-            <input class="checkbox-input" type="checkbox" id="terms" value="terms" name="terms" required>
+            <input class="checkbox-input" type="checkbox" id="terms" name="terms" required>
             <label for="terms"><span>Agree to Terms and Conditions</span></label>
           </div>
         </p>
-        <div data-netlify-recaptcha="true" required></div>
-        <p>
-          <button class="button" type="submit">Send</button>
+        <div class="captcha" data-netlify-recaptcha="true" required></div>
+        <p class="button-container">
+          <button class="button form" type="submit">Send</button>
         </p>
       </form>
     </section>
@@ -173,7 +177,8 @@
         <p>Any time that is gray is available. Any time that is orange is booked. Any time that is Blue has recently become available. Both Rink 1 and Rink 2 are shown.</p>
         <p>You can also book JR's Stoneroom here, the schedule is also shown.</p>
         <p>If you have any questions or concerns, or need help with booking a time please give Mike Carella a call at 716-316-1526</p>
-        <h5>WE ALSO OFFER INDIVIDUAL RATES FOR TRAINING PURPOSES. MORNING AND DAYTIME RENTALS ALSO AVAILABLE AT REDUCED RATE.</h5><a class="rent-ice button" target="_blank" rel="noopener noreferrer" href="https://tms.ezfacility.com/overview2.aspx?vouname=vohydepark&amp;amp;vopassword=123456">Rent Ice Today</a>
+        <h5>WE ALSO OFFER INDIVIDUAL RATES FOR TRAINING PURPOSES. MORNING AND DAYTIME RENTALS ALSO AVAILABLE AT REDUCED RATE.</h5>
+        <div class="button-container"><a class="rent-ice button" target="_blank" rel="noopener noreferrer" href="https://tms.ezfacility.com/overview2.aspx?vouname=vohydepark&amp;amp;vopassword=123456">Rent Ice Today</a></div>
       </section>
       <footer>
         <p>&copy; <script>new Date().getFullYear()>document.write(new Date().getFullYear());</script> Hyde Park Ice Pavilion</p>
@@ -196,17 +201,20 @@
       <section class="banner info">
         <h3>Party Central</h3>
         <h4>Many Different Party Choices</h4>
-        <p>The Hyde Park Ice Pavilion is a perfect place for any type of gathering. Birthday Parties, Graduations, Jack and Jill, Baptism, Bridal Showers and Weddings have all been major success.</p><img src="img/wedding.jpg" alt="Hyde Park Ice Pavilion Party"><a class="button" mailto="mike@niagaratournaments.com">Book a Party</a>
+        <p>The Hyde Park Ice Pavilion is a perfect place for any type of gathering. Birthday Parties, Graduations, Jack and Jill, Baptism, Bridal Showers and Weddings have all been major success.</p><img src="img/wedding.jpg" alt="Hyde Park Ice Pavilion Party">
+        <div class="button-container"><a class="button" mailto="mike@niagaratournaments.com">Book a Party</a></div>
       </section>
       <section class="banner info">
         <h3>JR Stone Room</h3>
         <h4>Great times and great friends!</h4>
-        <p>Come check out the JR Stone Room for our fabulous food and drink. Whether after your pick-up hockey game or stopping by for a bite to eat. JR Stone Room will provide you with a great atmosphere and excellent food and beverage.</p><img src="img/stoneroom.jpg" alt="JR Stone Room"><a class="button" href="https://www.jrstoneroom.com">JR Stone Room</a>
+        <p>Come check out the JR Stone Room for our fabulous food and drink. Whether after your pick-up hockey game or stopping by for a bite to eat. JR Stone Room will provide you with a great atmosphere and excellent food and beverage.</p><img src="img/stoneroom.jpg" alt="JR Stone Room">
+        <div class="button-container"><a class="button" href="https://www.jrstoneroom.com">JR Stone Room</a></div>
       </section>
       <section class="banner info">
         <h3>Niagara Sports Tournaments</h3>
         <h4>Best Youth Hockey Tournament experience in the Northeast!</h4>
-        <p>Niagara Sports Tournaments has been presenting youth hockey tournament opportunities since 1990. We provide the best run youth hockey tournaments in the northeast to help provide youth hockey to hundreds of teams throughout the U.S. and Canada per year.</p><img src="img/niagara.jpg" alt="Niagara Sports Tournaments"><a class="button" href="https://www.niagaratournaments.com">Niagara Sports Tournaments</a>
+        <p>Niagara Sports Tournaments has been presenting youth hockey tournament opportunities since 1990. We provide the best run youth hockey tournaments in the northeast to help provide youth hockey to hundreds of teams throughout the U.S. and Canada per year.</p><img src="img/niagara.jpg" alt="Niagara Sports Tournaments">
+        <div class="button-container"><a class="button" href="https://www.niagaratournaments.com">Niagara Sports Tournaments</a></div>
       </section>
       <footer>
         <p>&copy; <script>new Date().getFullYear()>document.write(new Date().getFullYear());</script> Hyde Park Ice Pavilion</p>
