@@ -185,10 +185,8 @@ form_inputs.map(input => {
 });
 const hashes = [].slice.call(document.querySelectorAll('.hash'));
 
-console.log(hashes);
-
 navigateToHash = (hash) => {
-  window.location.href = `https://hydeparkicepavilion/${hash}`;
+  window.location.href = `/${hash}`;
 }
 
 document.addEventListener('click',  (event) => {

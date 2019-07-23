@@ -1,7 +1,7 @@
 const hashes = [].slice.call(document.querySelectorAll('.hash'));
 
 navigateToHash = (hash) => {
-  window.location.href = `https://hydeparkicepavilion/${hash}`;
+  window.location.href = `/${hash}`;
 }
 
 document.addEventListener('click',  (event) => {
