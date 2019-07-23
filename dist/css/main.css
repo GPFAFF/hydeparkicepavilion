@@ -611,6 +611,7 @@ h5 {
 /* line 26, src/sass/components/_button.scss */
 .button:hover {
   cursor: pointer;
+  background-color: #184360;
 }
 
 /* line 1, src/sass/components/_map.scss */
@@ -830,16 +831,32 @@ form .select-box::after {
 /* line 4, src/sass/pages/rent-ice.scss */
 .info img {
   width: 100%;
+  max-width: 100%;
 }
 
-/* line 8, src/sass/pages/rent-ice.scss */
+/* line 9, src/sass/pages/rent-ice.scss */
 .info ul {
   font-weight: bold;
 }
 
-/* line 10, src/sass/pages/rent-ice.scss */
+/* line 11, src/sass/pages/rent-ice.scss */
 .info ul li {
   font-weight: normal;
+}
+
+/* line 3, src/sass/pages/hockey.scss */
+#hockey .banner.info .buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+}
+
+/* line 1, src/sass/pages/programs.scss */
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* line 1, src/sass/pages/home.scss */

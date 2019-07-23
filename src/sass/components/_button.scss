@@ -25,5 +25,6 @@
 
   &:hover {
     cursor: pointer;
+    background-color: darken($blue, 10%);
   }
 }

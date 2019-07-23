@@ -1,0 +1,11 @@
+#hockey {
+  .banner.info {
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 10px;
+      
+    }
+  }
+}

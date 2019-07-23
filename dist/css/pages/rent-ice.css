@@ -14,14 +14,15 @@
 /* line 4, src/sass/pages/rent-ice.scss */
 .info img {
   width: 100%;
+  max-width: 100%;
 }
 
-/* line 8, src/sass/pages/rent-ice.scss */
+/* line 9, src/sass/pages/rent-ice.scss */
 .info ul {
   font-weight: bold;
 }
 
-/* line 10, src/sass/pages/rent-ice.scss */
+/* line 11, src/sass/pages/rent-ice.scss */
 .info ul li {
   font-weight: normal;
 }
