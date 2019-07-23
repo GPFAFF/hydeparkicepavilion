@@ -48,9 +48,9 @@ form(
     select(name="skating", id="skating", required)
       option(value="")
       option(value="none") None
-      option(value="oneYear") 1 Year
-      option(value="twoYears") 2 Years
-      option(value="threeYears") 3 Years or greater
+      option(value="1") 1 Year
+      option(value="2") 2 Years
+      option(value="3 or greater") 3 Years or greater
     label(for="skating")
       span Years Experince
   p.form-group
@@ -65,7 +65,7 @@ form(
   p.form-group
     input(
       type="text", 
-      name="Address",
+      name="address",
       id="address",  
       required
     )
@@ -113,7 +113,6 @@ form(
       input.checkbox-input(
         type="checkbox"
         id="terms" 
-        value="terms"
         name="terms"
         required
       )
