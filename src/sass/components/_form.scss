@@ -79,6 +79,42 @@ form {
     }
   }
 
+  .checkbox {
+    color: $black;
+    text-shadow: none;
+    line-height: 1.25;
+    display: block;
+
+    .checkbox-container {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+
+      > input[type="checkbox"] {
+        -webkit-appearance: none;
+        width: 30px;
+        height: 30px;
+        background :white;
+        border-radius: 5px;
+        border: 2px solid #555;
+      }
+
+      input[type="checkbox"] + label {
+        margin: 10px;
+        cursor: pointer;
+        padding: 10px 0;
+        height: 60px;
+        display: block;
+        align-items: center;
+  
+        > span {
+          display: block;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
   .select-box {
     position: relative;
     select {

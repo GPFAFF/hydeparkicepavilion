@@ -796,11 +796,60 @@ form .form-group textarea + label > span {
 }
 
 /* line 82, src/sass/components/_form.scss */
+form .checkbox {
+  color: #000000;
+  text-shadow: none;
+  line-height: 1.25;
+  display: block;
+}
+
+/* line 88, src/sass/components/_form.scss */
+form .checkbox .checkbox-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 93, src/sass/components/_form.scss */
+form .checkbox .checkbox-container > input[type="checkbox"] {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid #555;
+}
+
+/* line 102, src/sass/components/_form.scss */
+form .checkbox .checkbox-container input[type="checkbox"] + label {
+  margin: 10px;
+  cursor: pointer;
+  padding: 10px 0;
+  height: 60px;
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 110, src/sass/components/_form.scss */
+form .checkbox .checkbox-container input[type="checkbox"] + label > span {
+  display: block;
+  margin-top: 10px;
+}
+
+/* line 118, src/sass/components/_form.scss */
 form .select-box {
   position: relative;
 }
 
-/* line 84, src/sass/components/_form.scss */
+/* line 120, src/sass/components/_form.scss */
 form .select-box select {
   /* for Firefox */
   -moz-appearance: none;
@@ -808,7 +857,7 @@ form .select-box select {
   -webkit-appearance: none;
 }
 
-/* line 91, src/sass/components/_form.scss */
+/* line 127, src/sass/components/_form.scss */
 form .select-box::after {
   border: 2px solid #333;
   border-right: 0;
