@@ -32,6 +32,15 @@ form(
     )
     label(for="surname")
       span Parent's Name
+  p.form-group
+    input(
+      type="text", 
+      id="email", 
+      name="email", 
+      required
+    )
+    label(for="email")
+      span Email Address
   p.form-group.select-box
     select(name="age", id="age", required)
       option(value="")
