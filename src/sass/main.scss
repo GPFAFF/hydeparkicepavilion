@@ -1,3 +1,5 @@
+@import "vars/_vars.scss";
+
 // components
 @import "components/base";
 @import "components/nav";
@@ -13,7 +15,7 @@
 @import "components/banner";
 @import "components/button";
 @import "components/map";
-@import "components/team"; 
+@import "components/team";
 @import "components/form";
 
 // pages
