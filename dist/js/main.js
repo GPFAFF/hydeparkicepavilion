@@ -48,7 +48,8 @@ document.addEventListener("DOMContentLoaded", (function() {
       setTimeout((function() {
         lazyImages.forEach((function(lazyImage) {
           if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-            lazyImage.src = lazyImage.dataset.src;            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.src = lazyImage.dataset.src;            
+            lazyImage.src = lazyImage.dataset.src;
             lazyImage.srcset = lazyImage.dataset.srcset;
             lazyImage.classList.remove("lazy");
 

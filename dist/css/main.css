@@ -36,10 +36,11 @@ html {
 body {
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
+  font-display: auto;
   height: auto;
 }
 
-/* line 32, src/sass/components/_base.scss */
+/* line 33, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -51,7 +52,7 @@ button {
   transition: padding-top .2s ease,margin-top .2s ease;
 }
 
-/* line 41, src/sass/components/_base.scss */
+/* line 42, src/sass/components/_base.scss */
 main {
   margin: 0 auto;
   -webkit-transform: translateY(0%);
@@ -64,7 +65,7 @@ main {
   height: 100vh;
 }
 
-/* line 49, src/sass/components/_base.scss */
+/* line 50, src/sass/components/_base.scss */
 main.opened {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
@@ -81,44 +82,44 @@ main.opened {
           flex-direction: column;
 }
 
-/* line 56, src/sass/components/_base.scss */
+/* line 57, src/sass/components/_base.scss */
 main.opened #home.active > .chevron {
   padding: 70px 0 250px;
 }
 
 @media (min-width: 480px) {
-  /* line 56, src/sass/components/_base.scss */
+  /* line 57, src/sass/components/_base.scss */
   main.opened #home.active > .chevron {
     padding: 200px 0 450px;
   }
 }
 
-/* line 66, src/sass/components/_base.scss */
+/* line 67, src/sass/components/_base.scss */
 main h2 {
   padding-top: 80px;
 }
 
 @media (min-width: 769px) {
-  /* line 66, src/sass/components/_base.scss */
+  /* line 67, src/sass/components/_base.scss */
   main h2 {
     padding-top: 0;
   }
 }
 
-/* line 74, src/sass/components/_base.scss */
+/* line 75, src/sass/components/_base.scss */
 main section {
   padding: 20px;
   z-index: 10;
 }
 
 @media (min-width: 480px) {
-  /* line 74, src/sass/components/_base.scss */
+  /* line 75, src/sass/components/_base.scss */
   main section {
     padding: 40px;
   }
 }
 
-/* line 82, src/sass/components/_base.scss */
+/* line 83, src/sass/components/_base.scss */
 main section > section {
   padding: 0;
   height: auto;
@@ -126,20 +127,20 @@ main section > section {
   border: 2px;
 }
 
-/* line 91, src/sass/components/_base.scss */
+/* line 92, src/sass/components/_base.scss */
 ul {
   list-style: none;
   padding: 0;
 }
 
-/* line 95, src/sass/components/_base.scss */
+/* line 96, src/sass/components/_base.scss */
 ul a {
   text-decoration: none;
   color: #ffffff;
   display: inline-block;
 }
 
-/* line 100, src/sass/components/_base.scss */
+/* line 101, src/sass/components/_base.scss */
 ul a::after {
   content: "";
   width: 0px;
@@ -150,18 +151,18 @@ ul a::after {
   transition: 300ms;
 }
 
-/* line 109, src/sass/components/_base.scss */
+/* line 110, src/sass/components/_base.scss */
 ul a:hover {
   -webkit-transform: transition 0.2s ease-in;
           transform: transition 0.2s ease-in;
 }
 
-/* line 112, src/sass/components/_base.scss */
+/* line 113, src/sass/components/_base.scss */
 ul a:hover::after {
   width: 100%;
 }
 
-/* line 119, src/sass/components/_base.scss */
+/* line 120, src/sass/components/_base.scss */
 .nav-container {
   position: relative;
   z-index: 20;
@@ -390,6 +391,7 @@ header h1 {
   line-height: 1;
   font-weight: 600;
   font-family: "Titillium Web", sans-serif;
+  font-display: auto;
   text-align: left;
   text-transform: uppercase;
   margin: 0;
@@ -404,7 +406,7 @@ header h1 {
   }
 }
 
-/* line 24, src/sass/components/_header.scss */
+/* line 25, src/sass/components/_header.scss */
 header h1 span {
   display: block;
 }
@@ -695,16 +697,17 @@ h5 {
   border-radius: 4px;
   -webkit-box-shadow: 0 4px 32px 3px #000000;
           box-shadow: 0 4px 32px 3px #000000;
-  font-family: Titillium Web, sans-serif;
+  font-family: "Titillium Web", sans-serif;
+  font-display: auto;
 }
 
-/* line 15, src/sass/components/_team.scss */
+/* line 16, src/sass/components/_team.scss */
 .team .member .card {
   max-width: 100%;
   width: 100%;
 }
 
-/* line 20, src/sass/components/_team.scss */
+/* line 21, src/sass/components/_team.scss */
 .team .member .title,
 .team .member .name,
 .team .member .email {
