@@ -8,8 +8,10 @@ block styles
   meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
   meta(name='language', content='English')
   meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes")
-  link(rel="stylesheet" href="css/main.css")
-  link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Titillium+Web")
+  link(rel="preload" href="css/main.css" as="style")
+  link(rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Titillium+Web" as="style")
+  link(rel="preload" href="./js/main.polyfills.min.js" as="script")
+  link(rel="preload" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP8V9bco2JPKrsDl2U-4y7ML4MFBPwmTg&callback=initMap" as="script")
 
   html(lang="en")
   body
@@ -23,6 +25,3 @@ block styles
       include includes/contact.pug
 
     script(src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU")
-    script(src="./js/main.polyfills.min.js")
-    script(async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP8V9bco2JPKrsDl2U-4y7ML4MFBPwmTg&callback=initMap")
