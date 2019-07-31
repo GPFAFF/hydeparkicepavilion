@@ -10,7 +10,8 @@
     padding: 40px;
     border-radius: 4px;
     box-shadow: $shadow;
-    font-family: Titillium Web, sans-serif;
+    font-family: $header_font;
+    font-display: auto;
 
     .card {
       max-width: 100%;
