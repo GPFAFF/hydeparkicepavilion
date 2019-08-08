@@ -13,8 +13,8 @@ block styles
   link(rel="stylesheet" href="css/main.css")
   link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Titillium+Web&display=swap")
 
-  link(rel="prefetch" href="./js/main.polyfills.min.js" as="script")
-  link(rel="prefetch" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP8V9bco2JPKrsDl2U-4y7ML4MFBPwmTg&callback=initMap" as="script")
+  link(href="./js/main.polyfills.min.js" as="script")
+  link(href="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP8V9bco2JPKrsDl2U-4y7ML4MFBPwmTg&callback=initMap" as="script")
 
   html(lang="en")
   body
@@ -28,3 +28,5 @@ block styles
       include includes/contact.pug
 
     script(src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU")
+    script(src="./js/main.polyfills.min.js")
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP8V9bco2JPKrsDl2U-4y7ML4MFBPwmTg&amp;callback=initMap")

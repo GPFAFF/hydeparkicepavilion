@@ -6,12 +6,12 @@
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Titillium+Web&amp;display=swap">
-<link rel="prefetch" href="./js/main.polyfills.min.js" as="script">
-<link rel="prefetch" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP8V9bco2JPKrsDl2U-4y7ML4MFBPwmTg&amp;callback=initMap" as="script">
+<link href="./js/main.polyfills.min.js" as="script">
+<link href="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP8V9bco2JPKrsDl2U-4y7ML4MFBPwmTg&amp;callback=initMap" as="script">
 <html lang="en"></html>
 <body>
   <main>
@@ -82,7 +82,7 @@
         </footer>
       </section>
     </section>
-    <section id="programs" data-app="programs">
+    <section class="hidden" id="programs" data-app="programs">
       <h2>Youth Programs</h2>
       <section class="banner info">
         <h3>Questions?</h3>
@@ -166,7 +166,7 @@
         </p>
       </form>
     </section>
-    <section id="rent-ice" data-app="rent-ice">
+    <section class="hidden" id="rent-ice" data-app="rent-ice">
       <h2>Rent Ice</h2>
       <section class="banner">
         <h3>Public Skating Hours</h3>
@@ -193,7 +193,7 @@
         <p class="copy"></p>
       </footer>
     </section>
-    <section id="hockey" data-app="hockey">
+    <section class="hidden" id="hockey" data-app="hockey">
       <h2>Hockey Programs</h2>
       <section class="banner info">
         <h3>Let's play hockey!</h3><img class="lazy" src="/img/placeholder.jpg" data-src="/img/rink2.jpg" data-srcset="/img/rink2.jpg" alt="Hyde Park Ice Paviliion">
@@ -205,7 +205,7 @@
         <p class="copy"></p>
       </footer>
     </section>
-    <section id="parties" data-app="parties">
+    <section class="hidden" id="parties" data-app="parties">
       <h2>Parties</h2>
       <section class="banner info">
         <h3>Party Central</h3>
@@ -229,7 +229,7 @@
         <p class="copy"></p>
       </footer>
     </section>
-    <section id="contact" data-app="contact">
+    <section class="hidden" id="contact" data-app="contact">
       <h2>Contact Our Team</h2>
       <section class="team">
         <div class="member"><img class="lazy card" alt="Mike Carella - President" src="/img/placeholder.jpg" data-src="img/mcarella.jpg" data-srcset="img/mcarella.jpg">
@@ -270,4 +270,6 @@
     </section>
   </main>
   <script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+  <script src="./js/main.polyfills.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP8V9bco2JPKrsDl2U-4y7ML4MFBPwmTg&amp;amp;callback=initMap"></script>
 </body>
