@@ -16,6 +16,6 @@ document.addEventListener('click',  (event) => {
   target.style.transition = 'opacity 0.3s cubic-bezier(0.61, -0.19, 0.7, -0.11)';
 });
 
-// dataApps.map(item => item.classList.add('hidden'));
-// dataApps[0].classList.remove('hidden');
-// dataApps[0].classList.add('active');
+dataApps.map(item => item.classList.add('hidden'));
+dataApps[0].classList.remove('hidden');
+dataApps[0].classList.add('active');

@@ -245,7 +245,7 @@ function initMap() {
   var hydePark = {lat: 43.097672, lng: -79.020234};
   var map = new google.maps.Map(
     document.getElementById('map'), { zoom: 14, center: hydePark});
-  new google.maps.Marker({ position: hydePark, map});
+  return new google.maps.Marker({ position: hydePark, map});
 }
 
 const hamburgerButton = document.querySelector('.hamburger');
@@ -298,6 +298,6 @@ document.addEventListener('click',  (event) => {
   target.style.transition = 'opacity 0.3s cubic-bezier(0.61, -0.19, 0.7, -0.11)';
 });
 
-// dataApps.map(item => item.classList.add('hidden'));
-// dataApps[0].classList.remove('hidden');
-// dataApps[0].classList.add('active');
+dataApps.map(item => item.classList.add('hidden'));
+dataApps[0].classList.remove('hidden');
+dataApps[0].classList.add('active');
