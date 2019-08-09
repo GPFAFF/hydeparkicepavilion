@@ -925,6 +925,32 @@ form .button.form {
   font-weight: normal;
 }
 
+/* line 1, src/sass/pages/rink-info.scss */
+.specials > .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 4, src/sass/pages/rink-info.scss */
+.specials > .buttons a, .specials > .buttons ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 30px;
+}
+
+/* line 8, src/sass/pages/rink-info.scss */
+.specials > .buttons a li:first-child, .specials > .buttons ul li:first-child {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* line 13, src/sass/pages/rink-info.scss */
+.specials > .buttons a li, .specials > .buttons ul li {
+  padding: 4px;
+}
+
 /* line 3, src/sass/pages/hockey.scss */
 #hockey .banner.info .buttons {
   display: grid;

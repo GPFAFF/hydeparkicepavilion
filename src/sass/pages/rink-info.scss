@@ -1,0 +1,18 @@
+.specials > .buttons {
+  display: flex;
+
+  a, ul {
+    flex: 1;
+    padding: 30px;
+
+    li:first-child {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    li {
+      padding: 4px;
+      
+    }
+  }
+}
