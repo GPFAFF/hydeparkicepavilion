@@ -1,0 +1,2 @@
+/*! project-name v0.0.1 | (c) 2019 GREG PFAFF | MIT License | http://link-to-your-git-repo.com */
+#partners .banner .row{display:block}@media (min-width:769px){#partners .banner .row{display:grid;grid-template-columns:repeat(2,1fr);padding:30px;justify-items:center;-ms-flex-align:center;align-items:center;grid-gap:20px}}#partners .banner .row div{text-align:center;justify-items:center;margin:0 auto 40px;padding:20px 0}#partners .banner .row div img{width:250px;height:auto;display:block;padding-bottom:20px;margin:0 auto}

@@ -1,0 +1,31 @@
+#partners {
+  .banner {
+    .row {
+      display: block;
+
+      @media (min-width: 769px) {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 30px;
+        justify-items: center;
+        align-items: center;
+        grid-gap: 20px;
+      }
+      
+      div {
+        text-align: center;
+        justify-items: center;
+        margin: 0 auto 40px;
+        padding: 20px 0;
+
+        img {
+          width: 250px;
+          height: auto;
+          display: block;
+          padding-bottom: 20px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
