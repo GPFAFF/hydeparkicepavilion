@@ -1,5 +1,20 @@
+@import "../vars/vars";
+
 .info {
   margin: 20px 0;
+
+  &.hours {
+    display: flex;
+
+    > section {
+      margin: 10px;
+      flex: 1;
+
+      @media (min-width: $mobile) {
+        margin: 24px;
+      }
+    }
+  }
 
   img {
     width: 100%;
