@@ -1,0 +1,16 @@
+.warning {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+
+  p, a {
+    color: $white;
+  }
+
+  a {
+    font-size: 20px;
+    text-shadow: $text-shadow;
+  }
+}
