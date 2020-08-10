@@ -1,23 +1,32 @@
 form(
-  name="Learn To Skate", 
-  method="POST", 
+  name="Learn To Skate",
+  method="POST",
   data-netlify="true"
   action="/success"
   netlify-honeypot="bot-field"
   data-netlify-recaptcha="true"
 )
-  h3 
-    span Hyde Park Learn to Skate
-    span Mite and Squirt Programs
+  h3 Power City  Bruins Youth Hockey Program Registration
 
   p.hidden
     input(name="bot-field")
     label
-      span Don't fill this out if you're human 
+      span Don't fill this out if you're human
+  p.form-group.select-box
+    select(name="league", id="league", required)
+      option(value="")
+      option(value="Learn to Skate") Learn to Skate
+      option(value="Mites 6U") Mites 6U
+      option(value="Mites 7U") Mites 7U
+      option(value="Mites 8U") Mites 8U
+      option(value="Squirt MOHL") Squirt MOHL
+      option(value="Bantam MOHL") Bantam MOHL
+    label(for="league")
+      span Select League
   p.form-group
     input(
-      type="text", 
-      id="name", 
+      type="text",
+      id="name",
       name="name",
       required
     )
@@ -25,18 +34,18 @@ form(
       span Player's Name
   p.form-group
     input(
-      type="text", 
-      id="surname", 
-      name="surname", 
+      type="text",
+      id="surname",
+      name="surname",
       required
     )
     label(for="surname")
       span Parent's Name
   p.form-group
     input(
-      type="text", 
-      id="email", 
-      name="email", 
+      type="text",
+      id="email",
+      name="email",
       required
     )
     label(for="email")
@@ -65,7 +74,7 @@ form(
   p.form-group
     input(
       type="text"
-      name="message", 
+      name="message",
       id="message",
       required
     )
@@ -73,45 +82,45 @@ form(
       span Describe your child's experience
   p.form-group
     input(
-      type="text", 
+      type="text",
       name="address",
-      id="address",  
+      id="address",
       required
     )
     label(for="address")
       span Address
   p.form-group
     input(
-      type="text", 
+      type="text",
       name="city",
-      id="city",  
+      id="city",
       required
     )
     label(for="city")
       span City
   p.form-group
     input(
-      type="text", 
-      name="state", 
-      id="state",  
+      type="text",
+      name="state",
+      id="state",
       required
     )
     label(for="state")
       span State
   p.form-group
     input(
-      type="text", 
-      name="zip", 
-      id="zip",  
+      type="text",
+      name="zip",
+      id="zip",
       required
     )
     label(for="zip")
       span Zip Code
   p.form-group
     input(
-      type="text", 
-      name="phone", 
-      id="phone",  
+      type="text",
+      name="phone",
+      id="phone",
       required
     )
     label(for="phone")
@@ -121,7 +130,7 @@ form(
     .checkbox-container
       input.checkbox-input(
         type="checkbox"
-        id="terms" 
+        id="terms"
         name="terms"
         required
       )
