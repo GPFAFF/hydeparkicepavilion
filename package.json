@@ -44,7 +44,7 @@
     "gulp-browserify": "^0.5.1",
     "gulp-imagemin": "^5.0.3",
     "js-yaml": "^3.13.1",
-    "shell-quote": "^1.6.1",
+    "shell-quote": "^1.7.3",
     "uglify-js": "^2.6.0"
   }
 }
