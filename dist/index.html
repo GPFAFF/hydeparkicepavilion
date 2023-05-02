@@ -11,12 +11,12 @@
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Titillium+Web&amp;display=swap">
 <link href="./js/main.polyfills.min.js" as="script">
-<link href="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP8V9bco2JPKrsDl2U-4y7ML4MFBPwmTg&amp;callback=initMap" as="script">
+<link href="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQOtenloDbGYvTWv6t7FSoFcqlzPRQDwg&amp;callback=initMap" as="script">
 <html lang="en"></html>
 <body>
   <main>
     <section class="nav-container">
-      <div class="hamburger visuallyhidden" role="button">Menu 
+      <div class="hamburger" role="button"><span class="visuallyhidden">Menu</span>
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
@@ -50,29 +50,27 @@
     <section id="home" data-app="home">
       <header>
         <h1><span>Hyde Park</span><span>Ice Pavilion</span></h1>
-      </header><a class="chevron visuallyhidden" href="#" role="button">Find out more about Hyde Park Ice Pavilion
+      </header><a class="chevron" href="#" role="button"><span class="visuallyhidden">Find out more about Hyde Park Ice Pavilion</span>
         <div class="left"></div>
         <div class="right"></div></a>
       <section class="rink-info">
         <h2>Learn about Hyde Park</h2>
         <section class="banner info">
-          <h3>October Open Skate</h3>
-          <p>10/5 - 6 P.M. - 7:20 P.M.</p>
-          <p>10/6 - 3 P.M. - 5 P.M.</p>
-          <p>10/19 - 5 P.M. - 7 P.M.</p>
-          <p>10/20 - 3 P.M. to 5 P.M. </p>
-        </section>
-        <section class="banner info">
-          <h3>October Public Skating Hours</h3>
-          <p>Saturdays 6 P.M. - 8 P.M.</p>
-          <p>Sundays 3:00 P.M. - 5:00 P.M.</p>
-          <p>Cost: $5.00</p>
-          <p>Skate Rental: $3.00</p>
+          <h3>Open Skate</h3>
+          <h4>Saturdays</h4>
+          <p>12/4 - 4:30 P.M. - 6 P.M.</p>
+          <p>12/11 - 4:30 P.M. - 6 P.M.</p>
+          <h4>Sundays</h4>
+          <p>11/14 - 6:00 - 8:00 P.M.</p>
+          <p>11/21 - 6:00 - 8:00 P.M.</p>
+          <p>11/28 - 6:00 - 8:00 P.M.</p>
+          <p>12/5 - 6:00 - 8:00 P.M.</p>
+          <p>12/12 - 6:00 - 8:00 P.M.</p>
+          <p>12/19 - 6:00 - 8:00 P.M.</p>
         </section>
         <section class="banner info">
           <h3>Shoot And Skate</h3>
-          <p>Monday, Wednesday, & Friday 12:30 P.M. to 3:00 P.M.</p>
-          <p>Cost: $10.00</p>
+          <h4>Closed until further notice</h4>
         </section>
         <section class="banner info">
           <h3>Hyde Park Ice Pavilion - Worth Visiting</h3>
@@ -94,13 +92,25 @@
       <section class="banner info">
         <h3>Questions?</h3>
         <h4>Click the program you're interested in for more details</h4>
-        <section class="buttons"><a class="button" href="/img/8u-travel.jpg" target="_blank" rel="noopener noreferrer">Learn more about the 8U Travel Mite Team</a><a class="button" href="/img/learnToSkate.jpg" target="_blank" rel="noopener noreferrer">Learn more about the learn to skate program</a><a class="button" href="/img/houseLeague.pdf" target="_blank" rel="noopener noreferrer">Learn more about Multi-Orginizational Leagues</a></section>
+        <section class="buttons"><a class="button" href="/img/mite.jpg" target="_blank" rel="noopener noreferrer">Mite Select Program</a><a class="button" href="/img/learnToSkate.jpg" target="_blank" rel="noopener noreferrer">Learn to skate and House Program</a><a class="button" href="/img/squirt.jpg" target="_blank" rel="noopener noreferrer">Squirt MOHL Program</a></section>
       </section>
       <form name="Learn To Skate" method="POST" data-netlify="true" action="/success" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
-        <h3> <span>Hyde Park Learn to Skate</span><span>Mite and Squirt Programs</span></h3>
+        <h3>Power City  Bruins Youth Hockey Program Registration</h3>
         <p class="hidden">
           <input name="bot-field">
-          <label><span>Don't fill this out if you're human </span></label>
+          <label><span>Don't fill this out if you're human</span></label>
+        </p>
+        <p class="form-group select-box">
+          <select name="league" id="league" required>
+            <option value=""></option>
+            <option value="Learn to Skate">Learn to Skate</option>
+            <option value="Mites 6U">Mites 6U</option>
+            <option value="Mites 7U">Mites 7U</option>
+            <option value="Mites 8U">Mites 8U</option>
+            <option value="Squirt MOHL">Squirt MOHL</option>
+            <option value="Bantam MOHL">Bantam MOHL</option>
+          </select>
+          <label for="league"><span>Select League</span></label>
         </p>
         <p class="form-group">
           <input type="text" id="name" name="name" required>
@@ -124,6 +134,14 @@
             <option value="8">8</option>
             <option value="9">9</option>
             <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
           </select>
           <label for="age"><span>Age</span></label>
         </p>
@@ -178,9 +196,9 @@
       <section class="banner info">
         <h3>Hyde Park Ice Pavilion</h3><img class="lazy" src="/img/placeholder.jpg" data-src="/img/rink.jpg" data-srcset="/img/rink.jpg" alt="Hyde Park Ice Pavilion">
         <h4>Ice Rates</h4>
-        <p>Summer $150</p>
-        <p>Fall/Winter $205</p>
-        <p>Non-Prime Time $160</p>
+        <p>Summer $165</p>
+        <p>Fall/Winter $215</p>
+        <p>Non-Prime Time $175</p>
         <p>Rent all the ice you would like, we offer a ton of ice rental options for pick up hockey and parties</p>
         <h4>Rental Directions</h4>
         <p>After clicking the button below you will be looking at the schedule for the rink. To adjust your view, hover your mouse over the words "Schedule" on the top left of the page. You can view the schedule by day, week or month. To change to a specific day, click on the calendar on the top left of the page.</p>
@@ -188,7 +206,7 @@
         <p>You can also book JR's Stoneroom here, the schedule is also shown.</p>
         <p>If you have any questions or concerns, or need help with booking a time please give Mike Carella a call at 716-316-1526</p>
         <h5>WE ALSO OFFER INDIVIDUAL RATES FOR TRAINING PURPOSES. MORNING AND DAYTIME RENTALS ALSO AVAILABLE AT REDUCED RATE.</h5>
-        <div class="button-container"><a class="rent-ice button" target="_blank" rel="noopener noreferrer" href="https://tms.ezfacility.com/overview2.aspx?vouname=vohydepark&amp;vopassword=123456">Rent Ice Today</a></div>
+        <div class="button-container"><a class="rent-ice button" target="_blank" rel="noopener noreferrer" href="https://www.catchcorner.com/facility-page/HydeParkIcePavilion?isEmbeddedFacility=true">Rent Ice Today</a></div>
       </section>
       <footer>
         <p class="copy"></p>
@@ -290,5 +308,5 @@
   </main>
   <script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
   <script src="./js/main.polyfills.min.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP8V9bco2JPKrsDl2U-4y7ML4MFBPwmTg&amp;callback=initMap" type="text/javascript"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQOtenloDbGYvTWv6t7FSoFcqlzPRQDwg&amp;callback=initMap" type="text/javascript"></script>
 </body>
